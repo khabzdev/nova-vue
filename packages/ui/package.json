@@ -51,10 +51,20 @@
       "import": "./dist/input.js",
       "require": "./dist/input.cjs"
     },
+    "./input-group": {
+      "types": "./dist/input-group.d.ts",
+      "import": "./dist/input-group.js",
+      "require": "./dist/input-group.cjs"
+    },
     "./label": {
       "types": "./dist/label.d.ts",
       "import": "./dist/label.js",
       "require": "./dist/label.cjs"
+    },
+    "./textarea": {
+      "types": "./dist/textarea.d.ts",
+      "import": "./dist/textarea.js",
+      "require": "./dist/textarea.cjs"
     },
     "./utils": {
       "types": "./dist/utils.d.ts",

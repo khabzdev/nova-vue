@@ -28,7 +28,9 @@ import {
   DialogClose,
 } from '@lattice/ui/dialog'
 import { Input } from '@lattice/ui/input'
+import { InputGroup, InputGroupInput, InputGroupAddon } from '@lattice/ui/input-group'
 import { Label } from '@lattice/ui/label'
+import { Textarea } from '@lattice/ui/textarea'
 import {
   Select,
   SelectTrigger,
@@ -50,6 +52,8 @@ const searchValue = ref('')
 const termsChecked = ref<boolean | 'indeterminate'>(false)
 const marketingChecked = ref<boolean | 'indeterminate'>(false)
 const indeterminateChecked = ref<boolean | 'indeterminate'>('indeterminate')
+const textareaValue = ref('')
+const bioValue = ref('')
 
 function toggleDarkMode() {
   isDark.value = !isDark.value
@@ -227,6 +231,151 @@ onMounted(() => {
                 <Label for="disabled-input">Disabled Field</Label>
                 <Input id="disabled-input" placeholder="Disabled" disabled class="peer" />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- InputGroup Section -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-semibold">InputGroup</h2>
+        <p class="text-sm text-muted-foreground">
+          Combine inputs with addons like icons, text, or buttons.
+        </p>
+
+        <div class="space-y-6">
+          <!-- With Text Addons -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Text Addons</h3>
+            <div class="flex flex-col gap-4 max-w-sm">
+              <div class="space-y-2">
+                <Label>Website</Label>
+                <InputGroup>
+                  <InputGroupAddon>https://</InputGroupAddon>
+                  <InputGroupInput placeholder="example.com" />
+                </InputGroup>
+              </div>
+
+              <div class="space-y-2">
+                <Label>Price</Label>
+                <InputGroup>
+                  <InputGroupAddon>$</InputGroupAddon>
+                  <InputGroupInput type="number" placeholder="0.00" />
+                  <InputGroupAddon>USD</InputGroupAddon>
+                </InputGroup>
+              </div>
+            </div>
+          </div>
+
+          <!-- With Icons -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">With Icons</h3>
+            <div class="flex flex-col gap-4 max-w-sm">
+              <div class="space-y-2">
+                <Label>Email</Label>
+                <InputGroup>
+                  <InputGroupAddon>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2" />
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                  </InputGroupAddon>
+                  <InputGroupInput type="email" placeholder="you@example.com" />
+                </InputGroup>
+              </div>
+
+              <div class="space-y-2">
+                <Label>Search</Label>
+                <InputGroup>
+                  <InputGroupAddon>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="m21 21-4.3-4.3" />
+                    </svg>
+                  </InputGroupAddon>
+                  <InputGroupInput type="search" placeholder="Search..." />
+                </InputGroup>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sizes -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Sizes</h3>
+            <div class="flex flex-col gap-4 max-w-sm">
+              <InputGroup>
+                <InputGroupAddon size="sm">@</InputGroupAddon>
+                <InputGroupInput size="sm" placeholder="Small" />
+              </InputGroup>
+              <InputGroup>
+                <InputGroupAddon>@</InputGroupAddon>
+                <InputGroupInput placeholder="Default" />
+              </InputGroup>
+              <InputGroup>
+                <InputGroupAddon size="lg">@</InputGroupAddon>
+                <InputGroupInput size="lg" placeholder="Large" />
+              </InputGroup>
+            </div>
+          </div>
+
+          <!-- Disabled -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Disabled</h3>
+            <div class="max-w-sm">
+              <InputGroup disabled>
+                <InputGroupAddon>$</InputGroupAddon>
+                <InputGroupInput placeholder="Disabled" disabled />
+                <InputGroupAddon>USD</InputGroupAddon>
+              </InputGroup>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Textarea Section -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-semibold">Textarea</h2>
+        <p class="text-sm text-muted-foreground">
+          Multi-line text input with COSS styling.
+        </p>
+
+        <div class="space-y-6">
+          <!-- Default -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Default</h3>
+            <div class="flex flex-col gap-3 max-w-md">
+              <Textarea v-model="textareaValue" placeholder="Write your message here..." />
+            </div>
+          </div>
+
+          <!-- Sizes -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Sizes</h3>
+            <div class="flex flex-col gap-3 max-w-md">
+              <Textarea size="sm" placeholder="Small textarea" :rows="2" />
+              <Textarea size="default" placeholder="Default textarea" />
+              <Textarea size="lg" placeholder="Large textarea" />
+            </div>
+          </div>
+
+          <!-- States -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">States</h3>
+            <div class="flex flex-col gap-3 max-w-md">
+              <Textarea placeholder="Normal textarea" />
+              <Textarea placeholder="Disabled textarea" disabled />
+              <Textarea placeholder="Read-only textarea" readonly value="This is read-only content." />
+              <Textarea placeholder="Invalid textarea" aria-invalid="true" />
+            </div>
+          </div>
+
+          <!-- With Label -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">With Label</h3>
+            <div class="max-w-md space-y-2">
+              <Label>Bio</Label>
+              <Textarea v-model="bioValue" placeholder="Tell us about yourself..." :rows="4" />
+              <p class="text-xs text-muted-foreground">{{ 500 - bioValue.length }} characters remaining</p>
             </div>
           </div>
         </div>
