@@ -26,6 +26,11 @@
       "import": "./dist/select.js",
       "require": "./dist/select.cjs"
     },
+    "./input": {
+      "types": "./dist/input.d.ts",
+      "import": "./dist/input.js",
+      "require": "./dist/input.cjs"
+    },
     "./utils": {
       "types": "./dist/utils.d.ts",
       "import": "./dist/utils.js",

@@ -25,6 +25,7 @@ export default defineConfig({
         index: resolve(__dirname, 'src/index.ts'),
         button: resolve(__dirname, 'src/components/Button/index.ts'),
         dialog: resolve(__dirname, 'src/components/Dialog/index.ts'),
+        input: resolve(__dirname, 'src/components/Input/index.ts'),
         select: resolve(__dirname, 'src/components/Select/index.ts'),
         utils: resolve(__dirname, 'src/utils/index.ts'),
       },

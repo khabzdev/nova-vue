@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import {
+  DialogClose as RekaDialogClose,
   DialogContent,
   type DialogContentEmits,
   type DialogContentProps,
@@ -54,6 +55,26 @@ const classes = computed(() =>
           :class="classes"
         >
           <slot />
+          <!-- Close X button -->
+          <RekaDialogClose
+            class="absolute right-4 top-4 rounded-lg p-1 opacity-64 transition-opacity hover:opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+            <span class="sr-only">Close</span>
+          </RekaDialogClose>
         </Motion>
       </DialogContent>
     </AnimatePresence>

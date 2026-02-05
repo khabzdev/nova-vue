@@ -11,6 +11,7 @@ import {
   DialogFooter,
   DialogClose,
 } from '@lattice/ui/dialog'
+import { Input } from '@lattice/ui/input'
 import {
   Select,
   SelectTrigger,
@@ -26,6 +27,9 @@ const dialogOpen = ref(false)
 const selectedFruit = ref('')
 const selectedFramework = ref('')
 const isDark = ref(false)
+const inputValue = ref('')
+const emailValue = ref('')
+const searchValue = ref('')
 
 function toggleDarkMode() {
   isDark.value = !isDark.value
@@ -146,6 +150,64 @@ onMounted(() => {
         </div>
       </section>
 
+      <!-- Input Section -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-semibold">Input</h2>
+        <p class="text-sm text-muted-foreground">
+          Text inputs with COSS styling, supporting multiple sizes and states.
+        </p>
+
+        <div class="space-y-6">
+          <!-- Default -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Default</h3>
+            <div class="flex flex-col gap-3 max-w-sm">
+              <Input v-model="inputValue" placeholder="Enter your name..." />
+              <Input v-model="emailValue" type="email" placeholder="Email address" />
+              <Input v-model="searchValue" type="search" placeholder="Search..." />
+            </div>
+          </div>
+
+          <!-- Sizes -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Sizes</h3>
+            <div class="flex flex-col gap-3 max-w-sm">
+              <Input size="xs" placeholder="Extra small input" />
+              <Input size="sm" placeholder="Small input" />
+              <Input size="default" placeholder="Default input" />
+              <Input size="lg" placeholder="Large input" />
+              <Input size="xl" placeholder="Extra large input" />
+            </div>
+          </div>
+
+          <!-- States -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">States</h3>
+            <div class="flex flex-col gap-3 max-w-sm">
+              <Input placeholder="Normal input" />
+              <Input placeholder="Disabled input" disabled />
+              <Input placeholder="Read-only input" readonly value="Read-only value" />
+              <Input placeholder="Invalid input" aria-invalid="true" />
+            </div>
+          </div>
+
+          <!-- With Labels -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Form Example</h3>
+            <div class="flex flex-col gap-4 max-w-sm">
+              <div class="space-y-2">
+                <label class="text-sm font-medium">Username</label>
+                <Input placeholder="johndoe" />
+              </div>
+              <div class="space-y-2">
+                <label class="text-sm font-medium">Password</label>
+                <Input type="password" placeholder="••••••••" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Dialog Section -->
       <section class="space-y-4">
         <h2 class="text-2xl font-semibold">Dialog</h2>
@@ -205,6 +267,7 @@ onMounted(() => {
                 </div>
               </div>
               <DialogFooter>
+                <Button type="submit">Save changes</Button>
                 <Button type="submit">Save changes</Button>
               </DialogFooter>
               <DialogClose />

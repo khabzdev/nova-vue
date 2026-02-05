@@ -12,7 +12,7 @@ const classes = computed(() =>
   cn(
     [
       'flex flex-col gap-1.5',
-      'text-center sm:text-left',
+      'text-left',
     ],
     props.class
   )
