@@ -91,6 +91,21 @@
       "import": "./dist/switch.js",
       "require": "./dist/switch.cjs"
     },
+    "./badge": {
+      "types": "./dist/badge.d.ts",
+      "import": "./dist/badge.js",
+      "require": "./dist/badge.cjs"
+    },
+    "./popover": {
+      "types": "./dist/popover.d.ts",
+      "import": "./dist/popover.js",
+      "require": "./dist/popover.cjs"
+    },
+    "./scroll-area": {
+      "types": "./dist/scroll-area.d.ts",
+      "import": "./dist/scroll-area.js",
+      "require": "./dist/scroll-area.cjs"
+    },
     "./utils": {
       "types": "./dist/utils.d.ts",
       "import": "./dist/utils.js",

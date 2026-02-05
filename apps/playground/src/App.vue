@@ -7,6 +7,7 @@ import {
   AccordionContent,
 } from '@lettuce/ui/accordion'
 import { Avatar, AvatarImage, AvatarFallback } from '@lettuce/ui/avatar'
+import { Badge } from '@lettuce/ui/badge'
 import { Button } from '@lettuce/ui/button'
 import {
   Card,
@@ -30,6 +31,8 @@ import {
 import { Input } from '@lettuce/ui/input'
 import { InputGroup, InputGroupInput, InputGroupAddon } from '@lettuce/ui/input-group'
 import { Label } from '@lettuce/ui/label'
+import { Popover, PopoverTrigger, PopoverContent } from '@lettuce/ui/popover'
+import { ScrollArea } from '@lettuce/ui/scroll-area'
 import { Textarea } from '@lettuce/ui/textarea'
 import {
   Select,
@@ -1028,6 +1031,136 @@ onMounted(() => {
               <Slider :default-value="[50]" :step="10" />
               <p class="text-sm text-muted-foreground">Step: 10</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Badge -->
+      <section id="badge">
+        <h2 class="text-2xl font-bold mb-4">Badge</h2>
+        <p class="text-muted-foreground mb-6">Small labels for status, categories, or counts.</p>
+
+        <div class="space-y-6">
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">Variants</h3>
+            <div class="flex flex-wrap gap-2">
+              <Badge>Default</Badge>
+              <Badge variant="secondary">Secondary</Badge>
+              <Badge variant="destructive">Destructive</Badge>
+              <Badge variant="success">Success</Badge>
+              <Badge variant="warning">Warning</Badge>
+              <Badge variant="info">Info</Badge>
+              <Badge variant="outline">Outline</Badge>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">Sizes</h3>
+            <div class="flex flex-wrap items-center gap-2">
+              <Badge size="sm">Small</Badge>
+              <Badge size="default">Default</Badge>
+              <Badge size="lg">Large</Badge>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">With Context</h3>
+            <div class="flex flex-wrap items-center gap-4">
+              <div class="flex items-center gap-2">
+                <span>Notifications</span>
+                <Badge>12</Badge>
+              </div>
+              <div class="flex items-center gap-2">
+                <span>Status:</span>
+                <Badge variant="success">Active</Badge>
+              </div>
+              <div class="flex items-center gap-2">
+                <span>Priority:</span>
+                <Badge variant="destructive">High</Badge>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popover -->
+      <section id="popover">
+        <h2 class="text-2xl font-bold mb-4">Popover</h2>
+        <p class="text-muted-foreground mb-6">Floating content panel triggered by a button.</p>
+
+        <div class="flex flex-wrap gap-4">
+          <Popover>
+            <PopoverTrigger>
+              <Button variant="outline">Open Popover</Button>
+            </PopoverTrigger>
+            <PopoverContent>
+              <div class="space-y-2">
+                <h4 class="font-medium">Dimensions</h4>
+                <p class="text-sm text-muted-foreground">Set the dimensions for the layer.</p>
+                <div class="grid gap-2 pt-2">
+                  <div class="grid grid-cols-3 items-center gap-4">
+                    <Label>Width</Label>
+                    <Input class="col-span-2 h-8" placeholder="100%" />
+                  </div>
+                  <div class="grid grid-cols-3 items-center gap-4">
+                    <Label>Height</Label>
+                    <Input class="col-span-2 h-8" placeholder="25px" />
+                  </div>
+                </div>
+              </div>
+            </PopoverContent>
+          </Popover>
+
+          <Popover>
+            <PopoverTrigger>
+              <Button variant="outline">Top Popover</Button>
+            </PopoverTrigger>
+            <PopoverContent side="top">
+              <p class="text-sm">This popover appears on top!</p>
+            </PopoverContent>
+          </Popover>
+
+          <Popover>
+            <PopoverTrigger>
+              <Button variant="outline">Right Popover</Button>
+            </PopoverTrigger>
+            <PopoverContent side="right" class="w-48">
+              <p class="text-sm">This popover appears on the right!</p>
+            </PopoverContent>
+          </Popover>
+        </div>
+      </section>
+
+      <!-- ScrollArea -->
+      <section id="scroll-area">
+        <h2 class="text-2xl font-bold mb-4">Scroll Area</h2>
+        <p class="text-muted-foreground mb-6">A custom scrollbar component for scrollable content.</p>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">Vertical Scroll</h3>
+            <ScrollArea class="h-72 w-full rounded-md border p-4">
+              <div class="space-y-4">
+                <h4 class="text-sm font-medium leading-none">Tags</h4>
+                <div class="space-y-2">
+                  <div v-for="tag in ['Vue', 'React', 'Angular', 'Svelte', 'Solid', 'Qwik', 'Astro', 'Next.js', 'Nuxt', 'Remix', 'SvelteKit', 'Gatsby', 'Eleventy', 'Hugo']" :key="tag" class="rounded-md border px-4 py-2 text-sm">
+                    {{ tag }}
+                  </div>
+                </div>
+              </div>
+            </ScrollArea>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">Horizontal Scroll</h3>
+            <ScrollArea class="w-full whitespace-nowrap rounded-md border" orientation="horizontal">
+              <div class="flex w-max space-x-4 p-4">
+                <div v-for="i in 10" :key="i" class="w-40 shrink-0 rounded-md border p-4">
+                  <div class="text-sm font-medium">Item {{ i }}</div>
+                  <p class="text-xs text-muted-foreground">Description for item {{ i }}</p>
+                </div>
+              </div>
+            </ScrollArea>
           </div>
         </div>
       </section>

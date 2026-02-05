@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { computed, toRefs } from 'vue'
-import { AvatarImage as RekaAvatarImage, type AvatarImageProps } from 'reka-ui'
+import { computed } from 'vue'
+import { AvatarImage as RekaAvatarImage } from 'reka-ui'
 import { cn } from '@/utils/cn'
 
-interface Props extends /* @vue-ignore */ AvatarImageProps {
+interface Props {
   class?: string
+  src: string
+  alt?: string
 }
 
 const props = defineProps<Props>()
 
-const { class: extraClasses } = toRefs(props)
-
 const classes = computed(() =>
-  cn('aspect-square h-full w-full object-cover', extraClasses?.value)
+  cn('aspect-square h-full w-full object-cover', props.class)
 )
 </script>
 
 <template>
-  <RekaAvatarImage :src="src" :class="classes">
+  <RekaAvatarImage :src="props.src" :class="classes" v-bind="$attrs">
     <slot />
   </RekaAvatarImage>
 </template>
