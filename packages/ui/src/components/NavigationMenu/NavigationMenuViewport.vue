@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { NavigationMenuViewport, type NavigationMenuViewportProps, useForwardProps } from 'reka-ui'
+import { NavigationMenuViewport, type NavigationMenuViewportProps } from 'reka-ui'
 import { cn } from '@/utils/cn'
 
 interface Props extends NavigationMenuViewportProps {
