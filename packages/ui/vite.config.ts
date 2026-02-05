@@ -23,6 +23,7 @@ export default defineConfig({
     lib: {
       entry: {
         index: resolve(__dirname, 'src/index.ts'),
+        accordion: resolve(__dirname, 'src/components/Accordion/index.ts'),
         button: resolve(__dirname, 'src/components/Button/index.ts'),
         dialog: resolve(__dirname, 'src/components/Dialog/index.ts'),
         input: resolve(__dirname, 'src/components/Input/index.ts'),

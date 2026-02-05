@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from '@lattice/ui/accordion'
 import { Button } from '@lattice/ui/button'
 import {
   Dialog,
@@ -204,6 +210,66 @@ onMounted(() => {
                 <Input type="password" placeholder="••••••••" />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Accordion Section -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-semibold">Accordion</h2>
+        <p class="text-sm text-muted-foreground">
+          Collapsible content panels for organizing information.
+        </p>
+
+        <div class="space-y-6">
+          <!-- Single -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Single (default)</h3>
+            <Accordion type="single" collapsible class="w-full max-w-md">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Is it accessible?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. It adheres to the WAI-ARIA design pattern and supports keyboard navigation.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Is it styled?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. It comes with default styles that match the Lattice UI design system.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Is it animated?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. The accordion smoothly animates when expanding and collapsing using CSS transitions.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+
+          <!-- Multiple -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Multiple</h3>
+            <Accordion type="multiple" class="w-full max-w-md">
+              <AccordionItem value="faq-1">
+                <AccordionTrigger>What is Lattice UI?</AccordionTrigger>
+                <AccordionContent>
+                  Lattice UI is a Vue 3 component library built with Reka UI primitives and Motion Vue animations, following COSS UI styling conventions.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="faq-2">
+                <AccordionTrigger>Can I customize the components?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. All components accept a class prop for custom styling, and the design tokens can be overridden via CSS custom properties.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="faq-3">
+                <AccordionTrigger>Does it support dark mode?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. Dark mode is class-based using the .dark class on the parent element, with automatic styling adjustments.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
