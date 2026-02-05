@@ -6,7 +6,17 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from '@lattice/ui/accordion'
+import { Avatar, AvatarImage, AvatarFallback } from '@lattice/ui/avatar'
 import { Button } from '@lattice/ui/button'
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@lattice/ui/card'
+import { Checkbox } from '@lattice/ui/checkbox'
 import {
   Dialog,
   DialogTrigger,
@@ -18,6 +28,7 @@ import {
   DialogClose,
 } from '@lattice/ui/dialog'
 import { Input } from '@lattice/ui/input'
+import { Label } from '@lattice/ui/label'
 import {
   Select,
   SelectTrigger,
@@ -36,6 +47,9 @@ const isDark = ref(false)
 const inputValue = ref('')
 const emailValue = ref('')
 const searchValue = ref('')
+const termsChecked = ref<boolean | 'indeterminate'>(false)
+const marketingChecked = ref<boolean | 'indeterminate'>(false)
+const indeterminateChecked = ref<boolean | 'indeterminate'>('indeterminate')
 
 function toggleDarkMode() {
   isDark.value = !isDark.value
@@ -202,12 +216,16 @@ onMounted(() => {
             <h3 class="text-sm font-medium text-muted-foreground mb-3">Form Example</h3>
             <div class="flex flex-col gap-4 max-w-sm">
               <div class="space-y-2">
-                <label class="text-sm font-medium">Username</label>
-                <Input placeholder="johndoe" />
+                <Label for="username">Username</Label>
+                <Input id="username" placeholder="johndoe" />
               </div>
               <div class="space-y-2">
-                <label class="text-sm font-medium">Password</label>
-                <Input type="password" placeholder="••••••••" />
+                <Label for="password">Password</Label>
+                <Input id="password" type="password" placeholder="••••••••" />
+              </div>
+              <div class="space-y-2">
+                <Label for="disabled-input">Disabled Field</Label>
+                <Input id="disabled-input" placeholder="Disabled" disabled class="peer" />
               </div>
             </div>
           </div>
@@ -410,6 +428,178 @@ onMounted(() => {
                 </SelectItem>
               </SelectContent>
             </Select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card Section -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-semibold">Card</h2>
+        <p class="text-sm text-muted-foreground">
+          Container component for grouping related content.
+        </p>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <!-- Default Card -->
+          <Card>
+            <CardHeader>
+              <CardTitle>Card Title</CardTitle>
+              <CardDescription>Card description with additional context.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p class="text-sm text-muted-foreground">
+                This is the main content area of the card. You can put any content here.
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Button size="sm">Action</Button>
+            </CardFooter>
+          </Card>
+
+          <!-- Outline Card -->
+          <Card variant="outline">
+            <CardHeader>
+              <CardTitle>Outline Variant</CardTitle>
+              <CardDescription>A card with outline styling.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p class="text-sm text-muted-foreground">
+                Use the outline variant for less prominent cards.
+              </p>
+            </CardContent>
+            <CardFooter class="gap-2">
+              <Button variant="outline" size="sm">Cancel</Button>
+              <Button size="sm">Save</Button>
+            </CardFooter>
+          </Card>
+        </div>
+      </section>
+
+      <!-- Checkbox Section -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-semibold">Checkbox</h2>
+        <p class="text-sm text-muted-foreground">
+          Checkboxes for binary choices with optional indeterminate state.
+        </p>
+
+        <div class="space-y-6">
+          <!-- Basic -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Basic</h3>
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-2">
+                <Checkbox id="terms" v-model:checked="termsChecked" />
+                <Label for="terms">Accept terms and conditions</Label>
+              </div>
+              <div class="flex items-center gap-2">
+                <Checkbox id="marketing" v-model:checked="marketingChecked" />
+                <Label for="marketing">Receive marketing emails</Label>
+              </div>
+            </div>
+          </div>
+
+          <!-- States -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">States</h3>
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-2">
+                <Checkbox id="indeterminate" v-model:checked="indeterminateChecked" />
+                <Label for="indeterminate">Indeterminate state</Label>
+              </div>
+              <div class="flex items-center gap-2">
+                <Checkbox id="disabled" disabled />
+                <Label for="disabled" class="opacity-64">Disabled checkbox</Label>
+              </div>
+              <div class="flex items-center gap-2">
+                <Checkbox id="disabled-checked" disabled :checked="true" />
+                <Label for="disabled-checked" class="opacity-64">Disabled checked</Label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Destructive -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Destructive Variant</h3>
+            <div class="flex items-center gap-2">
+              <Checkbox id="delete" variant="destructive" :checked="true" />
+              <Label for="delete">I understand this action is irreversible</Label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Avatar Section -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-semibold">Avatar</h2>
+        <p class="text-sm text-muted-foreground">
+          User avatars with image and fallback support.
+        </p>
+
+        <div class="space-y-6">
+          <!-- Sizes -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Sizes</h3>
+            <div class="flex items-end gap-4">
+              <Avatar size="xs">
+                <AvatarImage src="https://github.com/vuejs.png" alt="Vue.js" />
+                <AvatarFallback>VU</AvatarFallback>
+              </Avatar>
+              <Avatar size="sm">
+                <AvatarImage src="https://github.com/vuejs.png" alt="Vue.js" />
+                <AvatarFallback>VU</AvatarFallback>
+              </Avatar>
+              <Avatar size="default">
+                <AvatarImage src="https://github.com/vuejs.png" alt="Vue.js" />
+                <AvatarFallback>VU</AvatarFallback>
+              </Avatar>
+              <Avatar size="lg">
+                <AvatarImage src="https://github.com/vuejs.png" alt="Vue.js" />
+                <AvatarFallback>VU</AvatarFallback>
+              </Avatar>
+              <Avatar size="xl">
+                <AvatarImage src="https://github.com/vuejs.png" alt="Vue.js" />
+                <AvatarFallback>VU</AvatarFallback>
+              </Avatar>
+              <Avatar size="2xl">
+                <AvatarImage src="https://github.com/vuejs.png" alt="Vue.js" />
+                <AvatarFallback>VU</AvatarFallback>
+              </Avatar>
+            </div>
+          </div>
+
+          <!-- Fallback -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">With Fallback</h3>
+            <div class="flex items-center gap-4">
+              <Avatar>
+                <AvatarImage src="https://invalid-url.com/broken.png" alt="Broken" />
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
+              <Avatar>
+                <AvatarFallback>AB</AvatarFallback>
+              </Avatar>
+              <Avatar>
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+            </div>
+          </div>
+
+          <!-- Avatar Group -->
+          <div>
+            <h3 class="text-sm font-medium text-muted-foreground mb-3">Avatar Group</h3>
+            <div class="flex -space-x-3">
+              <Avatar class="border-2 border-background">
+                <AvatarImage src="https://github.com/vuejs.png" alt="Vue" />
+                <AvatarFallback>VU</AvatarFallback>
+              </Avatar>
+              <Avatar class="border-2 border-background">
+                <AvatarImage src="https://github.com/vitejs.png" alt="Vite" />
+                <AvatarFallback>VI</AvatarFallback>
+              </Avatar>
+              <Avatar class="border-2 border-background">
+                <AvatarFallback>+3</AvatarFallback>
+              </Avatar>
+            </div>
           </div>
         </div>
       </section>

@@ -16,10 +16,25 @@
       "import": "./dist/accordion.js",
       "require": "./dist/accordion.cjs"
     },
+    "./avatar": {
+      "types": "./dist/avatar.d.ts",
+      "import": "./dist/avatar.js",
+      "require": "./dist/avatar.cjs"
+    },
     "./button": {
       "types": "./dist/button.d.ts",
       "import": "./dist/button.js",
       "require": "./dist/button.cjs"
+    },
+    "./card": {
+      "types": "./dist/card.d.ts",
+      "import": "./dist/card.js",
+      "require": "./dist/card.cjs"
+    },
+    "./checkbox": {
+      "types": "./dist/checkbox.d.ts",
+      "import": "./dist/checkbox.js",
+      "require": "./dist/checkbox.cjs"
     },
     "./dialog": {
       "types": "./dist/dialog.d.ts",
@@ -35,6 +50,11 @@
       "types": "./dist/input.d.ts",
       "import": "./dist/input.js",
       "require": "./dist/input.cjs"
+    },
+    "./label": {
+      "types": "./dist/label.d.ts",
+      "import": "./dist/label.js",
+      "require": "./dist/label.cjs"
     },
     "./utils": {
       "types": "./dist/utils.d.ts",

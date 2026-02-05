@@ -24,9 +24,13 @@ export default defineConfig({
       entry: {
         index: resolve(__dirname, 'src/index.ts'),
         accordion: resolve(__dirname, 'src/components/Accordion/index.ts'),
+        avatar: resolve(__dirname, 'src/components/Avatar/index.ts'),
         button: resolve(__dirname, 'src/components/Button/index.ts'),
+        card: resolve(__dirname, 'src/components/Card/index.ts'),
+        checkbox: resolve(__dirname, 'src/components/Checkbox/index.ts'),
         dialog: resolve(__dirname, 'src/components/Dialog/index.ts'),
         input: resolve(__dirname, 'src/components/Input/index.ts'),
+        label: resolve(__dirname, 'src/components/Label/index.ts'),
         select: resolve(__dirname, 'src/components/Select/index.ts'),
         utils: resolve(__dirname, 'src/utils/index.ts'),
       },
