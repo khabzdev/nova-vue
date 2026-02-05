@@ -33,12 +33,14 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      external: ['vue', 'reka-ui', 'motion-v'],
+      external: ['vue', 'reka-ui', 'motion-v', '@hugeicons/vue', '@hugeicons/core-free-icons'],
       output: {
         globals: {
           vue: 'Vue',
           'reka-ui': 'RekaUI',
           'motion-v': 'MotionV',
+          '@hugeicons/vue': 'HugeiconsVue',
+          '@hugeicons/core-free-icons': 'HugeiconsCoreFreeIcons',
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'style.css') return 'styles.css'

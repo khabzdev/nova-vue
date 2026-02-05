@@ -9,6 +9,8 @@ import {
   useForwardPropsEmits,
 } from 'reka-ui'
 import { AnimatePresence, Motion } from 'motion-v'
+import { HugeiconsIcon } from '@hugeicons/vue'
+import { Cancel01Icon } from '@hugeicons/core-free-icons'
 import { cn } from '@/utils/cn'
 import { scaleSpringPreset } from '@/utils/animations'
 import DialogOverlay from './DialogOverlay.vue'
@@ -59,20 +61,7 @@ const classes = computed(() =>
           <RekaDialogClose
             class="absolute right-4 top-4 rounded-lg p-1 opacity-64 transition-opacity hover:opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M18 6 6 18" />
-              <path d="m6 6 12 12" />
-            </svg>
+            <HugeiconsIcon :icon="Cancel01Icon" :size="16" />
             <span class="sr-only">Close</span>
           </RekaDialogClose>
         </Motion>

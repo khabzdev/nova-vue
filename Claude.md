@@ -9,8 +9,37 @@ A Vue 3 component library built with Reka UI primitives, following COSS UI styli
 - **Motion Vue (motion-v)** for animations
 - **Tailwind CSS v4** with `@tailwindcss/postcss`
 - **class-variance-authority (CVA)** for variant management
+- **@hugeicons/vue** + **@hugeicons/core-free-icons** for icons
 - **TypeScript** throughout
 - **Bun** as package manager and runtime
+
+## Icons (Hugeicons)
+
+Use `HugeiconsIcon` component with icon data from `@hugeicons/core-free-icons`:
+
+```vue
+<script setup lang="ts">
+import { HugeiconsIcon } from '@hugeicons/vue'
+import { ArrowDown01Icon, Cancel01Icon, Tick02Icon } from '@hugeicons/core-free-icons'
+</script>
+
+<template>
+  <HugeiconsIcon :icon="ArrowDown01Icon" :size="16" />
+  <HugeiconsIcon :icon="Cancel01Icon" :size="16" class="opacity-64" />
+  <HugeiconsIcon :icon="Tick02Icon" :size="14" />
+</template>
+```
+
+**Props:**
+- `icon` - Icon data from `@hugeicons/core-free-icons` (required)
+- `size` - Icon size in pixels (default: 24)
+- `color` - Icon color (default: `currentColor`)
+- `stroke-width` - Stroke width
+
+**Common icons used in components:**
+- `Cancel01Icon` - Close/X button
+- `ArrowDown01Icon` - Dropdown chevrons
+- `Tick02Icon` - Checkmarks
 
 ## Component Structure
 

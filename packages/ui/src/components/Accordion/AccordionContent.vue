@@ -15,6 +15,9 @@ const classes = computed(() =>
     [
       'overflow-hidden',
       'text-base sm:text-sm',
+      // Animation using Reka UI CSS custom properties
+      'data-[state=open]:animate-accordion-down',
+      'data-[state=closed]:animate-accordion-up',
     ],
     props.class
   )

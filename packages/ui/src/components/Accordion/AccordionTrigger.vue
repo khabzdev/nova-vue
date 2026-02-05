@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { AccordionHeader, AccordionTrigger, type AccordionTriggerProps, useForwardProps } from 'reka-ui'
+import { HugeiconsIcon } from '@hugeicons/vue'
+import { ArrowDown01Icon } from '@hugeicons/core-free-icons'
 import { cn } from '@/utils/cn'
 
 interface Props extends AccordionTriggerProps {
@@ -38,20 +40,7 @@ const classes = computed(() =>
   <AccordionHeader class="flex">
     <AccordionTrigger v-bind="forwarded" :class="classes">
       <slot />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="size-4 shrink-0 text-muted-foreground transition-transform duration-200"
-      >
-        <path d="m6 9 6 6 6-6" />
-      </svg>
+      <HugeiconsIcon :icon="ArrowDown01Icon" :size="16" class="shrink-0 text-muted-foreground transition-transform duration-200" />
     </AccordionTrigger>
   </AccordionHeader>
 </template>
