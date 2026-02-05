@@ -1,14 +1,14 @@
 {
-  "name": "lattice",
+  "name": "lettuce",
   "private": true,
   "workspaces": ["packages/*", "apps/*"],
   "scripts": {
-    "build": "bun run --filter '@lattice/ui' build",
-    "dev": "bun run --filter '@lattice/ui' dev",
-    "playground": "bun run --filter '@lattice/playground' dev",
+    "build": "bun run --filter '@lettuce/ui' build",
+    "dev": "bun run --filter '@lettuce/ui' dev",
+    "playground": "bun run --filter '@lettuce/playground' dev",
     "lint": "oxlint --ignore-path .gitignore .",
     "lint:fix": "oxlint --fix --ignore-path .gitignore .",
-    "type-check": "bun run --filter '@lattice/ui' type-check"
+    "type-check": "bun run --filter '@lettuce/ui' type-check"
   },
   "devDependencies": {
     "@types/bun": "latest",

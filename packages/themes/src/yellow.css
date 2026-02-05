@@ -1,0 +1,37 @@
+/*
+ * Lettuce UI - Yellow Theme
+ * A bright, optimistic yellow theme for cheerful interfaces.
+ * Import this file after @lettuce/ui/styles.css
+ */
+
+/* Light Mode */
+:root {
+  --primary: var(--color-yellow-500);
+  --primary-foreground: var(--color-yellow-950);
+  --ring: var(--color-yellow-400);
+
+  /* Accent to match */
+  --accent: color-mix(in srgb, var(--color-yellow-500) 15%, transparent);
+  --accent-foreground: var(--color-yellow-700);
+
+  /* Sidebar */
+  --sidebar-primary: var(--color-yellow-500);
+  --sidebar-primary-foreground: var(--color-yellow-950);
+  --sidebar-ring: var(--color-yellow-400);
+}
+
+/* Dark Mode */
+.dark {
+  --primary: var(--color-yellow-400);
+  --primary-foreground: var(--color-yellow-950);
+  --ring: var(--color-yellow-500);
+
+  /* Accent to match */
+  --accent: color-mix(in srgb, var(--color-yellow-500) 15%, transparent);
+  --accent-foreground: var(--color-yellow-300);
+
+  /* Sidebar */
+  --sidebar-primary: var(--color-yellow-400);
+  --sidebar-primary-foreground: var(--color-yellow-950);
+  --sidebar-ring: var(--color-yellow-500);
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@lettuce/themes",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    "./default.css": "./src/default.css",
+    "./red.css": "./src/red.css",
+    "./rose.css": "./src/rose.css",
+    "./orange.css": "./src/orange.css",
+    "./green.css": "./src/green.css",
+    "./blue.css": "./src/blue.css",
+    "./yellow.css": "./src/yellow.css",
+    "./violet.css": "./src/violet.css"
+  },
+  "files": ["src"],
+  "sideEffects": ["**/*.css"],
+  "peerDependencies": {
+    "@lettuce/ui": "workspace:*"
+  }
+}

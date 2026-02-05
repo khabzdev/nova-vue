@@ -1,4 +1,4 @@
-# Lattice UI Component Library
+# Lettuce UI Component Library
 
 A Vue 3 component library built with Reka UI primitives, following COSS UI styling conventions.
 
@@ -366,9 +366,9 @@ Support tree-shakeable imports via package.json exports:
 
 Usage:
 ```ts
-import { Button } from '@lattice/ui/button'
-import { Dialog, DialogContent } from '@lattice/ui/dialog'
-import '@lattice/ui/styles.css'
+import { Button } from '@lettuce/ui/button'
+import { Dialog, DialogContent } from '@lettuce/ui/dialog'
+import '@lettuce/ui/styles.css'
 ```
 
 ## Creating New Components

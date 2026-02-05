@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
- * Lattice UI Design Tokens
+ * Lettuce UI Design Tokens
  */
 
 @custom-variant dark (&:is(.dark *));

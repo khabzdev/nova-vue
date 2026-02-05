@@ -1,0 +1,19 @@
+/*
+ * Lettuce UI - Default Theme (Neutral)
+ * This is the default theme, no overrides needed.
+ * Import this file after @lettuce/ui/styles.css
+ */
+
+/* Light Mode - Default uses neutral colors */
+:root {
+  --primary: var(--color-neutral-800);
+  --primary-foreground: var(--color-neutral-50);
+  --ring: var(--color-neutral-400);
+}
+
+/* Dark Mode */
+.dark {
+  --primary: var(--color-neutral-100);
+  --primary-foreground: var(--color-neutral-800);
+  --ring: var(--color-neutral-500);
+}

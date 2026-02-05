@@ -1,5 +1,5 @@
 {
-  "name": "@lattice/ui",
+  "name": "@lettuce/ui",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -65,6 +65,31 @@
       "types": "./dist/textarea.d.ts",
       "import": "./dist/textarea.js",
       "require": "./dist/textarea.cjs"
+    },
+    "./separator": {
+      "types": "./dist/separator.d.ts",
+      "import": "./dist/separator.js",
+      "require": "./dist/separator.cjs"
+    },
+    "./toast": {
+      "types": "./dist/toast.d.ts",
+      "import": "./dist/toast.js",
+      "require": "./dist/toast.cjs"
+    },
+    "./tooltip": {
+      "types": "./dist/tooltip.d.ts",
+      "import": "./dist/tooltip.js",
+      "require": "./dist/tooltip.cjs"
+    },
+    "./slider": {
+      "types": "./dist/slider.d.ts",
+      "import": "./dist/slider.js",
+      "require": "./dist/slider.cjs"
+    },
+    "./switch": {
+      "types": "./dist/switch.d.ts",
+      "import": "./dist/switch.js",
+      "require": "./dist/switch.cjs"
     },
     "./utils": {
       "types": "./dist/utils.d.ts",

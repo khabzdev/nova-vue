@@ -1,0 +1,37 @@
+/*
+ * Lettuce UI - Rose Theme
+ * A soft, elegant rose theme for refined interfaces.
+ * Import this file after @lettuce/ui/styles.css
+ */
+
+/* Light Mode */
+:root {
+  --primary: var(--color-rose-600);
+  --primary-foreground: var(--color-white);
+  --ring: var(--color-rose-400);
+
+  /* Accent to match */
+  --accent: color-mix(in srgb, var(--color-rose-500) 10%, transparent);
+  --accent-foreground: var(--color-rose-700);
+
+  /* Sidebar */
+  --sidebar-primary: var(--color-rose-600);
+  --sidebar-primary-foreground: var(--color-white);
+  --sidebar-ring: var(--color-rose-400);
+}
+
+/* Dark Mode */
+.dark {
+  --primary: var(--color-rose-500);
+  --primary-foreground: var(--color-white);
+  --ring: var(--color-rose-400);
+
+  /* Accent to match */
+  --accent: color-mix(in srgb, var(--color-rose-500) 15%, transparent);
+  --accent-foreground: var(--color-rose-300);
+
+  /* Sidebar */
+  --sidebar-primary: var(--color-rose-500);
+  --sidebar-primary-foreground: var(--color-white);
+  --sidebar-ring: var(--color-rose-400);
+}

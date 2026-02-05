@@ -5,9 +5,9 @@ import {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from '@lattice/ui/accordion'
-import { Avatar, AvatarImage, AvatarFallback } from '@lattice/ui/avatar'
-import { Button } from '@lattice/ui/button'
+} from '@lettuce/ui/accordion'
+import { Avatar, AvatarImage, AvatarFallback } from '@lettuce/ui/avatar'
+import { Button } from '@lettuce/ui/button'
 import {
   Card,
   CardHeader,
@@ -15,8 +15,8 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from '@lattice/ui/card'
-import { Checkbox } from '@lattice/ui/checkbox'
+} from '@lettuce/ui/card'
+import { Checkbox } from '@lettuce/ui/checkbox'
 import {
   Dialog,
   DialogTrigger,
@@ -26,11 +26,11 @@ import {
   DialogDescription,
   DialogFooter,
   DialogClose,
-} from '@lattice/ui/dialog'
-import { Input } from '@lattice/ui/input'
-import { InputGroup, InputGroupInput, InputGroupAddon } from '@lattice/ui/input-group'
-import { Label } from '@lattice/ui/label'
-import { Textarea } from '@lattice/ui/textarea'
+} from '@lettuce/ui/dialog'
+import { Input } from '@lettuce/ui/input'
+import { InputGroup, InputGroupInput, InputGroupAddon } from '@lettuce/ui/input-group'
+import { Label } from '@lettuce/ui/label'
+import { Textarea } from '@lettuce/ui/textarea'
 import {
   Select,
   SelectTrigger,
@@ -40,7 +40,14 @@ import {
   SelectGroup,
   SelectLabel,
   SelectSeparator,
-} from '@lattice/ui/select'
+} from '@lettuce/ui/select'
+import { Separator } from '@lettuce/ui/separator'
+import { Slider } from '@lettuce/ui/slider'
+import { Switch } from '@lettuce/ui/switch'
+import { Toaster, useToast } from '@lettuce/ui/toast'
+import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '@lettuce/ui/tooltip'
+
+const { toast } = useToast()
 
 const dialogOpen = ref(false)
 const selectedFruit = ref('')
@@ -54,6 +61,10 @@ const marketingChecked = ref<boolean | 'indeterminate'>(false)
 const indeterminateChecked = ref<boolean | 'indeterminate'>('indeterminate')
 const textareaValue = ref('')
 const bioValue = ref('')
+const switchChecked = ref(false)
+const switchDisabled = ref(true)
+const sliderValue = ref([50])
+const rangeSliderValue = ref([25, 75])
 
 function toggleDarkMode() {
   isDark.value = !isDark.value
@@ -67,12 +78,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-background p-8 transition-colors">
+  <TooltipProvider>
+    <div class="min-h-screen bg-background p-8 transition-colors">
     <div class="mx-auto max-w-4xl space-y-12">
       <!-- Header -->
       <header class="flex items-start justify-between">
         <div class="space-y-2">
-          <h1 class="text-4xl font-bold tracking-tight">Lattice UI</h1>
+          <h1 class="text-4xl font-bold tracking-tight">Lettuce UI</h1>
           <p class="text-muted-foreground">
             A Vue 3 component library built with Reka UI and Motion Vue
           </p>
@@ -402,7 +414,7 @@ onMounted(() => {
               <AccordionItem value="item-2">
                 <AccordionTrigger>Is it styled?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. It comes with default styles that match the Lattice UI design system.
+                  Yes. It comes with default styles that match the Lettuce UI design system.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
@@ -419,9 +431,9 @@ onMounted(() => {
             <h3 class="text-sm font-medium text-muted-foreground mb-3">Multiple</h3>
             <Accordion type="multiple" class="w-full max-w-md">
               <AccordionItem value="faq-1">
-                <AccordionTrigger>What is Lattice UI?</AccordionTrigger>
+                <AccordionTrigger>What is Lettuce UI?</AccordionTrigger>
                 <AccordionContent>
-                  Lattice UI is a Vue 3 component library built with Reka UI primitives and Motion Vue animations, following COSS UI styling conventions.
+                  Lettuce UI is a Vue 3 component library built with Reka UI primitives and Motion Vue animations, following COSS UI styling conventions.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="faq-2">
@@ -753,10 +765,279 @@ onMounted(() => {
         </div>
       </section>
 
+      <!-- Separator -->
+      <section id="separator">
+        <h2 class="text-2xl font-bold mb-4">Separator</h2>
+        <p class="text-muted-foreground mb-6">A visual divider between content sections.</p>
+
+        <div class="grid gap-6">
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">Horizontal</h3>
+            <div class="space-y-3">
+              <p>Content above separator</p>
+              <Separator />
+              <p>Content below separator</p>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">Vertical</h3>
+            <div class="flex items-center h-5 gap-4">
+              <span>Home</span>
+              <Separator orientation="vertical" />
+              <span>Products</span>
+              <Separator orientation="vertical" />
+              <span>About</span>
+              <Separator orientation="vertical" />
+              <span>Contact</span>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">With Text</h3>
+            <div class="flex items-center gap-4">
+              <Separator class="flex-1" />
+              <span class="text-muted-foreground text-sm">OR</span>
+              <Separator class="flex-1" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tooltip -->
+      <section id="tooltip">
+        <h2 class="text-2xl font-bold mb-4">Tooltip</h2>
+        <p class="text-muted-foreground mb-6">A popup that displays information on hover or focus.</p>
+
+        <div class="flex flex-wrap gap-4">
+          <Tooltip>
+            <TooltipTrigger as-child>
+              <Button variant="outline">Hover me</Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>This is a tooltip</p>
+            </TooltipContent>
+          </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger as-child>
+              <Button variant="outline">Top tooltip</Button>
+            </TooltipTrigger>
+            <TooltipContent side="top">
+              <p>Appears on top</p>
+            </TooltipContent>
+          </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger as-child>
+              <Button variant="outline">Right tooltip</Button>
+            </TooltipTrigger>
+            <TooltipContent side="right">
+              <p>Appears on right</p>
+            </TooltipContent>
+          </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger as-child>
+              <Button variant="outline">Left tooltip</Button>
+            </TooltipTrigger>
+            <TooltipContent side="left">
+              <p>Appears on left</p>
+            </TooltipContent>
+          </Tooltip>
+
+          <Tooltip :delay-duration="0">
+            <TooltipTrigger as-child>
+              <Button variant="secondary">No delay</Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Instant tooltip!</p>
+            </TooltipContent>
+          </Tooltip>
+        </div>
+      </section>
+
+      <!-- Toast -->
+      <section id="toast">
+        <h2 class="text-2xl font-bold mb-4">Toast</h2>
+        <p class="text-muted-foreground mb-6">Notifications that appear temporarily to inform users.</p>
+
+        <div class="flex flex-wrap gap-4">
+          <Button
+            @click="toast({ title: 'Default Toast', description: 'This is a default notification.' })"
+          >
+            Default Toast
+          </Button>
+
+          <Button
+            variant="outline"
+            @click="toast({ title: 'Success!', description: 'Your changes have been saved.', variant: 'success' })"
+          >
+            Success Toast
+          </Button>
+
+          <Button
+            variant="destructive"
+            @click="toast({ title: 'Error', description: 'Something went wrong.', variant: 'destructive' })"
+          >
+            Destructive Toast
+          </Button>
+
+          <Button
+            variant="secondary"
+            @click="toast({ title: 'Warning', description: 'Please review your input.', variant: 'warning' })"
+          >
+            Warning Toast
+          </Button>
+
+          <Button
+            variant="outline"
+            @click="toast({ title: 'Info', description: 'Here is some information.', variant: 'info' })"
+          >
+            Info Toast
+          </Button>
+
+          <Button
+            variant="ghost"
+            @click="toast({
+              title: 'With Action',
+              description: 'Click the action button.',
+              action: { label: 'Undo', onClick: () => console.log('Undo clicked') }
+            })"
+          >
+            Toast with Action
+          </Button>
+        </div>
+      </section>
+
+      <!-- Switch -->
+      <section id="switch">
+        <h2 class="text-2xl font-bold mb-4">Switch</h2>
+        <p class="text-muted-foreground mb-6">A toggle control for on/off states.</p>
+
+        <div class="space-y-6">
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">Variants</h3>
+            <div class="flex flex-wrap items-center gap-6">
+              <div class="flex items-center gap-2">
+                <Switch v-model:checked="switchChecked" />
+                <Label>Default</Label>
+              </div>
+              <div class="flex items-center gap-2">
+                <Switch variant="destructive" checked />
+                <Label>Destructive</Label>
+              </div>
+              <div class="flex items-center gap-2">
+                <Switch variant="success" checked />
+                <Label>Success</Label>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">Sizes</h3>
+            <div class="flex flex-wrap items-center gap-6">
+              <div class="flex items-center gap-2">
+                <Switch size="sm" checked />
+                <Label>Small</Label>
+              </div>
+              <div class="flex items-center gap-2">
+                <Switch size="default" checked />
+                <Label>Default</Label>
+              </div>
+              <div class="flex items-center gap-2">
+                <Switch size="lg" checked />
+                <Label>Large</Label>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">States</h3>
+            <div class="flex flex-wrap items-center gap-6">
+              <div class="flex items-center gap-2">
+                <Switch v-model:checked="switchDisabled" disabled />
+                <Label class="opacity-50">Disabled</Label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slider -->
+      <section id="slider">
+        <h2 class="text-2xl font-bold mb-4">Slider</h2>
+        <p class="text-muted-foreground mb-6">An input for selecting values from a range.</p>
+
+        <div class="space-y-6">
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">Default</h3>
+            <div class="max-w-md space-y-2">
+              <Slider v-model="sliderValue" />
+              <p class="text-sm text-muted-foreground">Value: {{ sliderValue[0] }}</p>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">Range Slider</h3>
+            <div class="max-w-md space-y-2">
+              <Slider v-model="rangeSliderValue" :min-steps-between-thumbs="5" />
+              <p class="text-sm text-muted-foreground">Range: {{ rangeSliderValue[0] }} - {{ rangeSliderValue[1] }}</p>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">Variants</h3>
+            <div class="max-w-md space-y-4">
+              <div class="space-y-2">
+                <Label>Default</Label>
+                <Slider :default-value="[60]" />
+              </div>
+              <div class="space-y-2">
+                <Label>Destructive</Label>
+                <Slider variant="destructive" :default-value="[40]" />
+              </div>
+              <div class="space-y-2">
+                <Label>Success</Label>
+                <Slider variant="success" :default-value="[80]" />
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">Sizes</h3>
+            <div class="max-w-md space-y-4">
+              <div class="space-y-2">
+                <Label>Small thumb</Label>
+                <Slider size="sm" :default-value="[30]" />
+              </div>
+              <div class="space-y-2">
+                <Label>Default thumb</Label>
+                <Slider size="default" :default-value="[50]" />
+              </div>
+              <div class="space-y-2">
+                <Label>Large thumb</Label>
+                <Slider size="lg" :default-value="[70]" />
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">With Steps</h3>
+            <div class="max-w-md space-y-2">
+              <Slider :default-value="[50]" :step="10" />
+              <p class="text-sm text-muted-foreground">Step: 10</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Footer -->
       <footer class="border-t pt-8 text-center text-sm text-muted-foreground">
         <p>Built with Reka UI, Motion Vue, and Tailwind CSS v4</p>
       </footer>
     </div>
   </div>
+  <Toaster />
+  </TooltipProvider>
 </template>
