@@ -49,6 +49,10 @@ import { Slider } from '@lettuce/ui/slider'
 import { Switch } from '@lettuce/ui/switch'
 import { Toaster, useToast } from '@lettuce/ui/toast'
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '@lettuce/ui/tooltip'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@lettuce/ui/tabs'
+import { Alert, AlertTitle, AlertDescription } from '@lettuce/ui/alert'
+import { HugeiconsIcon } from '@hugeicons/vue'
+import { Alert02Icon, CheckmarkCircle02Icon, InformationCircleIcon, AlertCircleIcon } from '@hugeicons/core-free-icons'
 
 const { toast } = useToast()
 
@@ -1162,6 +1166,123 @@ onMounted(() => {
               </div>
             </ScrollArea>
           </div>
+        </div>
+      </section>
+
+      <!-- Tabs -->
+      <section id="tabs">
+        <h2 class="text-2xl font-bold mb-4">Tabs</h2>
+        <p class="text-muted-foreground mb-6">A set of layered sections of content, known as tab panels.</p>
+
+        <div class="space-y-8">
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold">Default Tabs</h3>
+            <Tabs default-value="account" class="w-full max-w-md">
+              <TabsList>
+                <TabsTrigger value="account">Account</TabsTrigger>
+                <TabsTrigger value="password">Password</TabsTrigger>
+                <TabsTrigger value="settings">Settings</TabsTrigger>
+              </TabsList>
+              <TabsContent value="account">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Account</CardTitle>
+                    <CardDescription>Make changes to your account here.</CardDescription>
+                  </CardHeader>
+                  <CardContent class="space-y-4">
+                    <div class="space-y-1">
+                      <Label>Name</Label>
+                      <Input placeholder="John Doe" />
+                    </div>
+                    <div class="space-y-1">
+                      <Label>Username</Label>
+                      <Input placeholder="@johndoe" />
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button>Save changes</Button>
+                  </CardFooter>
+                </Card>
+              </TabsContent>
+              <TabsContent value="password">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Password</CardTitle>
+                    <CardDescription>Change your password here.</CardDescription>
+                  </CardHeader>
+                  <CardContent class="space-y-4">
+                    <div class="space-y-1">
+                      <Label>Current password</Label>
+                      <Input type="password" />
+                    </div>
+                    <div class="space-y-1">
+                      <Label>New password</Label>
+                      <Input type="password" />
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button>Change password</Button>
+                  </CardFooter>
+                </Card>
+              </TabsContent>
+              <TabsContent value="settings">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Settings</CardTitle>
+                    <CardDescription>Manage your preferences.</CardDescription>
+                  </CardHeader>
+                  <CardContent class="space-y-4">
+                    <div class="flex items-center justify-between">
+                      <Label>Email notifications</Label>
+                      <Switch />
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <Label>Push notifications</Label>
+                      <Switch />
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alert -->
+      <section id="alert">
+        <h2 class="text-2xl font-bold mb-4">Alert</h2>
+        <p class="text-muted-foreground mb-6">Displays important messages to users.</p>
+
+        <div class="space-y-4 max-w-xl">
+          <Alert>
+            <HugeiconsIcon :icon="Alert02Icon" class="size-4" />
+            <AlertTitle>Default Alert</AlertTitle>
+            <AlertDescription>This is a default alert for general information.</AlertDescription>
+          </Alert>
+
+          <Alert variant="info">
+            <HugeiconsIcon :icon="InformationCircleIcon" class="size-4" />
+            <AlertTitle>Info</AlertTitle>
+            <AlertDescription>This is an informational alert with helpful details.</AlertDescription>
+          </Alert>
+
+          <Alert variant="success">
+            <HugeiconsIcon :icon="CheckmarkCircle02Icon" class="size-4" />
+            <AlertTitle>Success</AlertTitle>
+            <AlertDescription>Your changes have been saved successfully.</AlertDescription>
+          </Alert>
+
+          <Alert variant="warning">
+            <HugeiconsIcon :icon="AlertCircleIcon" class="size-4" />
+            <AlertTitle>Warning</AlertTitle>
+            <AlertDescription>Please review your changes before proceeding.</AlertDescription>
+          </Alert>
+
+          <Alert variant="destructive">
+            <HugeiconsIcon :icon="Alert02Icon" class="size-4" />
+            <AlertTitle>Error</AlertTitle>
+            <AlertDescription>Something went wrong. Please try again later.</AlertDescription>
+          </Alert>
         </div>
       </section>
 

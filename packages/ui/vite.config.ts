@@ -24,6 +24,7 @@ export default defineConfig({
       entry: {
         index: resolve(__dirname, 'src/index.ts'),
         accordion: resolve(__dirname, 'src/components/Accordion/index.ts'),
+        alert: resolve(__dirname, 'src/components/Alert/index.ts'),
         avatar: resolve(__dirname, 'src/components/Avatar/index.ts'),
         badge: resolve(__dirname, 'src/components/Badge/index.ts'),
         button: resolve(__dirname, 'src/components/Button/index.ts'),
@@ -39,6 +40,7 @@ export default defineConfig({
         separator: resolve(__dirname, 'src/components/Separator/index.ts'),
         slider: resolve(__dirname, 'src/components/Slider/index.ts'),
         switch: resolve(__dirname, 'src/components/Switch/index.ts'),
+        tabs: resolve(__dirname, 'src/components/Tabs/index.ts'),
         textarea: resolve(__dirname, 'src/components/Textarea/index.ts'),
         toast: resolve(__dirname, 'src/components/Toast/index.ts'),
         tooltip: resolve(__dirname, 'src/components/Tooltip/index.ts'),
