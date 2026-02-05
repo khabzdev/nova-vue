@@ -61,6 +61,11 @@
       "import": "./dist/label.js",
       "require": "./dist/label.cjs"
     },
+    "./navigation-menu": {
+      "types": "./dist/navigation-menu.d.ts",
+      "import": "./dist/navigation-menu.js",
+      "require": "./dist/navigation-menu.cjs"
+    },
     "./textarea": {
       "types": "./dist/textarea.d.ts",
       "import": "./dist/textarea.js",

@@ -51,6 +51,15 @@ import { Toaster, useToast } from '@lettuce/ui/toast'
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '@lettuce/ui/tooltip'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@lettuce/ui/tabs'
 import { Alert, AlertTitle, AlertDescription } from '@lettuce/ui/alert'
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+  NavigationMenuLink,
+  NavigationMenuViewport,
+} from '@lettuce/ui/navigation-menu'
 import { HugeiconsIcon } from '@hugeicons/vue'
 import { Alert02Icon, CheckmarkCircle02Icon, InformationCircleIcon, AlertCircleIcon } from '@hugeicons/core-free-icons'
 
@@ -1246,6 +1255,106 @@ onMounted(() => {
             </Tabs>
           </div>
         </div>
+      </section>
+
+      <!-- Navigation Menu -->
+      <section id="navigation-menu">
+        <h2 class="text-2xl font-bold mb-4">Navigation Menu</h2>
+        <p class="text-muted-foreground mb-6">A collection of links for navigating websites.</p>
+
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Getting Started</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul class="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <li class="row-span-3">
+                    <NavigationMenuLink as-child>
+                      <a
+                        class="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                        href="#"
+                      >
+                        <div class="mb-2 mt-4 text-lg font-medium">Lettuce UI</div>
+                        <p class="text-sm leading-tight text-muted-foreground">
+                          Beautifully designed components built with Reka UI and Tailwind CSS.
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink as-child>
+                      <a href="#" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div class="text-sm font-medium leading-none">Introduction</div>
+                        <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">Re-usable components built with Reka UI.</p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink as-child>
+                      <a href="#" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div class="text-sm font-medium leading-none">Installation</div>
+                        <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">How to install dependencies and setup your project.</p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink as-child>
+                      <a href="#" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div class="text-sm font-medium leading-none">Typography</div>
+                        <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">Styles for headings, paragraphs, lists and more.</p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <li>
+                    <NavigationMenuLink as-child>
+                      <a href="#button" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div class="text-sm font-medium leading-none">Button</div>
+                        <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">Displays a button or a component that looks like a button.</p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink as-child>
+                      <a href="#dialog" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div class="text-sm font-medium leading-none">Dialog</div>
+                        <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">A modal dialog that interrupts the user with important content.</p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink as-child>
+                      <a href="#select" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div class="text-sm font-medium leading-none">Select</div>
+                        <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">Displays a list of options for the user to pick from.</p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink as-child>
+                      <a href="#tabs" class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div class="text-sm font-medium leading-none">Tabs</div>
+                        <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">A set of layered sections of content—known as tab panels.</p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink class="inline-flex items-center justify-center gap-1.5 h-9 px-3 sm:h-8 rounded-lg bg-background text-foreground text-sm font-medium outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background hover:bg-accent hover:text-accent-foreground">
+                Documentation
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+          <NavigationMenuViewport />
+        </NavigationMenu>
       </section>
 
       <!-- Alert -->

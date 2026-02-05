@@ -34,6 +34,7 @@ export default defineConfig({
         input: resolve(__dirname, 'src/components/Input/index.ts'),
         'input-group': resolve(__dirname, 'src/components/InputGroup/index.ts'),
         label: resolve(__dirname, 'src/components/Label/index.ts'),
+        'navigation-menu': resolve(__dirname, 'src/components/NavigationMenu/index.ts'),
         popover: resolve(__dirname, 'src/components/Popover/index.ts'),
         'scroll-area': resolve(__dirname, 'src/components/ScrollArea/index.ts'),
         select: resolve(__dirname, 'src/components/Select/index.ts'),
