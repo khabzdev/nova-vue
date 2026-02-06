@@ -86,6 +86,11 @@
       "import": "./dist/label.js",
       "require": "./dist/label.cjs"
     },
+    "./listbox": {
+      "types": "./dist/listbox.d.ts",
+      "import": "./dist/listbox.js",
+      "require": "./dist/listbox.cjs"
+    },
     "./navigation-menu": {
       "types": "./dist/navigation-menu.d.ts",
       "import": "./dist/navigation-menu.js",
@@ -105,6 +110,16 @@
       "types": "./dist/toast.d.ts",
       "import": "./dist/toast.js",
       "require": "./dist/toast.cjs"
+    },
+    "./toggle": {
+      "types": "./dist/toggle.d.ts",
+      "import": "./dist/toggle.js",
+      "require": "./dist/toggle.cjs"
+    },
+    "./toggle-group": {
+      "types": "./dist/toggle-group.d.ts",
+      "import": "./dist/toggle-group.js",
+      "require": "./dist/toggle-group.cjs"
     },
     "./tooltip": {
       "types": "./dist/tooltip.d.ts",
@@ -130,6 +145,11 @@
       "types": "./dist/popover.d.ts",
       "import": "./dist/popover.js",
       "require": "./dist/popover.cjs"
+    },
+    "./radio-group": {
+      "types": "./dist/radio-group.d.ts",
+      "import": "./dist/radio-group.js",
+      "require": "./dist/radio-group.cjs"
     },
     "./scroll-area": {
       "types": "./dist/scroll-area.d.ts",

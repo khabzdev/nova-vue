@@ -21,6 +21,10 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
+  args: {
+    itemsPerPage: 10,
+    total: 100,
+  },
   render: () => ({
     components: {
       Pagination,
@@ -50,6 +54,10 @@ export const Default: Story = {
 }
 
 export const WithFirstAndLast: Story = {
+  args: {
+    itemsPerPage: 10,
+    total: 100,
+  },
   render: () => ({
     components: {
       Pagination,
@@ -83,6 +91,10 @@ export const WithFirstAndLast: Story = {
 }
 
 export const WithMoreSiblings: Story = {
+  args: {
+    itemsPerPage: 10,
+    total: 100,
+  },
   render: () => ({
     components: {
       Pagination,
@@ -112,6 +124,10 @@ export const WithMoreSiblings: Story = {
 }
 
 export const Disabled: Story = {
+  args: {
+    itemsPerPage: 10,
+    total: 100,
+  },
   render: () => ({
     components: {
       Pagination,
