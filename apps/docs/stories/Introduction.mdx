@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Introduction" />
+
+# 🥬 Lettuce UI
+
+A modern Vue 3 component library built with [Reka UI](https://reka-ui.com) and [Tailwind CSS](https://tailwindcss.com).
+
+## Features
+
+- **Accessible** - Built on Reka UI primitives, ensuring WAI-ARIA compliance
+- **Customizable** - Easily customize colors, sizes, and variants using Tailwind CSS
+- **TypeScript** - Full TypeScript support with complete type definitions
+- **Dark Mode** - Built-in dark mode support using CSS variables
+- **Tree-shakeable** - Import only the components you need
+
+## Installation
+
+```bash
+# npm
+npm install @lettuce/ui reka-ui
+
+# bun
+bun add @lettuce/ui reka-ui
+
+# pnpm
+pnpm add @lettuce/ui reka-ui
+```
+
+## Import Styles
+
+```typescript
+// main.ts
+import '@lettuce/ui/styles.css'
+```
+
+## Usage
+
+```vue
+<script setup lang="ts">
+import { Button } from '@lettuce/ui'
+</script>
+
+<template>
+  <Button>Click me</Button>
+</template>
+```
+
+## Credits
+
+Lettuce UI is inspired by and built upon:
+
+- [Reka UI](https://reka-ui.com) - Unstyled, accessible UI primitives for Vue
+- [shadcn/ui](https://ui.shadcn.com) - Design system and component patterns
+- [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework

@@ -3,6 +3,7 @@ import { computed, toRefs } from 'vue'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { Motion } from 'motion-v'
 import { cn } from '@/utils/cn'
+import LoaderCircle from './LoaderCircle.vue'
 
 const buttonVariants = cva(
   [
@@ -131,6 +132,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  loading: {
+    type: Boolean,
+    default: false,
+  },
   type: {
     type: String as () => 'button' | 'submit' | 'reset',
     default: 'button',
@@ -141,7 +146,9 @@ const props = defineProps({
   },
 })
 
-const { variant, size, class: extraClasses } = toRefs(props)
+const { variant, size, class: extraClasses, loading, disabled } = toRefs(props)
+
+const isDisabled = computed(() => disabled.value || loading.value)
 
 const buttonClasses = computed(() =>
   cn(buttonVariants({ variant: variant.value, size: size.value }), extraClasses.value)
@@ -152,13 +159,14 @@ const buttonClasses = computed(() =>
   <Motion
     as="button"
     :type="type"
-    :disabled="disabled"
+    :disabled="isDisabled"
     :class="buttonClasses"
     data-slot="button"
     :while-hover="{ scale: 1.01 }"
     :while-tap="{ scale: 0.98 }"
     :transition="{ type: 'spring' as const, stiffness: 400, damping: 17 }"
   >
+    <LoaderCircle v-if="loading" class="size-4 animate-spin" />
     <slot />
   </Motion>
 </template>
