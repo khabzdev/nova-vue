@@ -166,6 +166,16 @@
       "import": "./dist/alert.js",
       "require": "./dist/alert.cjs"
     },
+    "./splitter": {
+      "types": "./dist/splitter.d.ts",
+      "import": "./dist/splitter.js",
+      "require": "./dist/splitter.cjs"
+    },
+    "./tree": {
+      "types": "./dist/tree.d.ts",
+      "import": "./dist/tree.js",
+      "require": "./dist/tree.cjs"
+    },
     "./utils": {
       "types": "./dist/utils.d.ts",
       "import": "./dist/utils.js",
