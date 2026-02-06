@@ -4,7 +4,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from '@lettuce/ui'
+} from '@lettuce/ui/tabs'
 
 const meta = {
   title: 'Components/Tabs',

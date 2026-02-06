@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Alert, AlertDescription, AlertTitle } from '@lettuce/ui'
+import { Alert, AlertDescription, AlertTitle } from '@lettuce/ui/alert'
 
 const meta = {
   title: 'Components/Alert',

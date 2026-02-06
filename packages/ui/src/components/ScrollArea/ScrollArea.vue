@@ -59,7 +59,7 @@ const showHorizontal = computed(() =>
     :scroll-hide-delay="scrollHideDelay"
     v-bind="$attrs"
   >
-    <ScrollAreaViewport class="size-full rounded-[inherit]">
+    <ScrollAreaViewport class="h-full w-full rounded-[inherit] [&>div]:!block">
       <slot />
     </ScrollAreaViewport>
     <ScrollAreaScrollbar

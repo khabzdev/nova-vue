@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Button } from '@lettuce/ui'
+import { Button } from '@lettuce/ui/button'
 
 const meta = {
   title: 'Components/Button',

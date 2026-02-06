@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
+import { Button } from '@lettuce/ui/button'
 import {
-  Button,
   Dialog,
   DialogContent,
   DialogDescription,
@@ -10,9 +10,9 @@ import {
   DialogTitle,
   DialogTrigger,
   DialogClose,
-  Input,
-  Label,
-} from '@lettuce/ui'
+} from '@lettuce/ui/dialog'
+import { Input } from '@lettuce/ui/input'
+import { Label } from '@lettuce/ui/label'
 
 const meta = {
   title: 'Components/Dialog',

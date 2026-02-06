@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import { Input, Label } from '@lettuce/ui'
+import { Input } from '@lettuce/ui/input'
+import { Label } from '@lettuce/ui/label'
 
 const meta = {
   title: 'Components/Input',

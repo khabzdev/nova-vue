@@ -6,10 +6,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-  Button,
-  Input,
-  Label,
-} from '@lettuce/ui'
+} from '@lettuce/ui/card'
+import { Button } from '@lettuce/ui/button'
+import { Input } from '@lettuce/ui/input'
+import { Label } from '@lettuce/ui/label'
 
 const meta = {
   title: 'Components/Card',
