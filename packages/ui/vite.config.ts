@@ -31,6 +31,7 @@ export default defineConfig({
         button: resolve(__dirname, 'src/components/Button/index.ts'),
         card: resolve(__dirname, 'src/components/Card/index.ts'),
         checkbox: resolve(__dirname, 'src/components/Checkbox/index.ts'),
+        'context-menu': resolve(__dirname, 'src/components/ContextMenu/index.ts'),
         dialog: resolve(__dirname, 'src/components/Dialog/index.ts'),
         'dropdown-menu': resolve(__dirname, 'src/components/DropdownMenu/index.ts'),
         'hover-card': resolve(__dirname, 'src/components/HoverCard/index.ts'),

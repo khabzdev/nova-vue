@@ -41,6 +41,11 @@
       "import": "./dist/checkbox.js",
       "require": "./dist/checkbox.cjs"
     },
+    "./context-menu": {
+      "types": "./dist/context-menu.d.ts",
+      "import": "./dist/context-menu.js",
+      "require": "./dist/context-menu.cjs"
+    },
     "./dialog": {
       "types": "./dist/dialog.d.ts",
       "import": "./dist/dialog.js",
