@@ -8,7 +8,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from '@novavue/ui/select'
+} from '@nova-vue/ui/select'
 
 const meta = {
   title: 'Components/Select',

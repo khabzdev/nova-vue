@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '@novavue/ui/tooltip'
-import { Button } from '@novavue/ui/button'
+import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '@nova-vue/ui/tooltip'
+import { Button } from '@nova-vue/ui/button'
 
 const meta = {
   title: 'Components/Tooltip',

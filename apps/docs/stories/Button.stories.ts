@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Button } from '@novavue/ui/button'
+import { Button } from '@nova-vue/ui/button'
 
 const meta = {
   title: 'Components/Button',

@@ -1,11 +1,11 @@
-# @novavue/colors
+# @nova-vue/colors
 
 Color themes for Nova Vue components.
 
 ## Installation
 
 ```bash
-bun add @novavue/colors
+bun add @nova-vue/colors
 ```
 
 ## Usage
@@ -14,8 +14,8 @@ Import a color theme CSS file **after** the main Nova Vue styles:
 
 ```ts
 // main.ts
-import '@novavue/ui/styles.css'
-import '@novavue/colors/blue.css' // or any other color theme
+import '@nova-vue/ui/styles.css'
+import '@nova-vue/colors/blue.css' // or any other color theme
 ```
 
 ## Available Themes

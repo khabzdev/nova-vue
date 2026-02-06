@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Label } from '@novavue/ui/label'
-import { Input } from '@novavue/ui/input'
+import { Label } from '@nova-vue/ui/label'
+import { Input } from '@nova-vue/ui/input'
 
 const meta = {
   title: 'Components/Label',

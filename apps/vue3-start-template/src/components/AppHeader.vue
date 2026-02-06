@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-import { Button } from '@novavue/ui/button'
-import { Input } from '@novavue/ui/input'
+import { Button } from '@nova-vue/ui/button'
+import { Input } from '@nova-vue/ui/input'
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -9,8 +9,8 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuLabel,
-} from '@novavue/ui/dropdown-menu'
-import { Avatar, AvatarFallback } from '@novavue/ui/avatar'
+} from '@nova-vue/ui/dropdown-menu'
+import { Avatar, AvatarFallback } from '@nova-vue/ui/avatar'
 
 defineProps<{
   isDark: boolean

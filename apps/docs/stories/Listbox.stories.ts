@@ -7,7 +7,7 @@ import {
   ListboxGroup,
   ListboxGroupLabel,
   ListboxFilter,
-} from '@novavue/ui/listbox'
+} from '@nova-vue/ui/listbox'
 
 const meta = {
   title: 'Components/Listbox',

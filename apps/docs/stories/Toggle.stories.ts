@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import { Toggle } from '@novavue/ui/toggle'
+import { Toggle } from '@nova-vue/ui/toggle'
 import { Icon } from '@iconify/vue'
 
 const meta = {

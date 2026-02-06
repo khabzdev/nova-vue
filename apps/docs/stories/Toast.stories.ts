@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Toaster, useToast } from '@novavue/ui/toast'
-import { Button } from '@novavue/ui/button'
+import { Toaster, useToast } from '@nova-vue/ui/toast'
+import { Button } from '@nova-vue/ui/button'
 
 const meta = {
   title: 'Components/Toast',

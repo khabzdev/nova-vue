@@ -47,12 +47,12 @@ pnpm preview
 
 ### Changing Colors
 
-Import a color theme from `@novavue/colors`:
+Import a color theme from `@nova-vue/colors`:
 
 ```typescript
 // main.ts
-import '@novavue/ui/styles.css'
-import '@novavue/colors/blue.css'  // Add your preferred color
+import '@nova-vue/ui/styles.css'
+import '@nova-vue/colors/blue.css'  // Add your preferred color
 import './style.css'
 ```
 

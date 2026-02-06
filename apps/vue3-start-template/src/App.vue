@@ -2,8 +2,8 @@
 import { ref, onMounted, provide } from 'vue'
 import AppSidebar from './components/AppSidebar.vue'
 import AppHeader from './components/AppHeader.vue'
-import { Toaster } from '@novavue/ui/toast'
-import { TooltipProvider } from '@novavue/ui/tooltip'
+import { Toaster } from '@nova-vue/ui/toast'
+import { TooltipProvider } from '@nova-vue/ui/tooltip'
 
 const isDark = ref(false)
 const sidebarCollapsed = ref(false)

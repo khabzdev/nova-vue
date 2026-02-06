@@ -15,7 +15,7 @@ import {
   ContextMenuSub,
   ContextMenuSubTrigger,
   ContextMenuSubContent,
-} from '@novavue/ui/context-menu'
+} from '@nova-vue/ui/context-menu'
 
 const meta = {
   title: 'Components/ContextMenu',

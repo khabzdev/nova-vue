@@ -1,17 +1,17 @@
 {
-  "name": "@novavue/ui",
+  "name": "@nova-vue/ui",
   "version": "0.1.0",
   "description": "A modern Vue 3 component library built with Reka UI and Tailwind CSS",
   "author": "Ndivhuwo Khabubu",
   "license": "MIT",
-  "homepage": "https://github.com/khabzdev/novavue",
+  "homepage": "https://github.com/khabzdev/nova-vue",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khabzdev/novavue.git",
+    "url": "git+https://github.com/khabzdev/nova-vue.git",
     "directory": "packages/ui"
   },
   "bugs": {
-    "url": "https://github.com/khabzdev/novavue/issues"
+    "url": "https://github.com/khabzdev/nova-vue/issues"
   },
   "keywords": [
     "vue",

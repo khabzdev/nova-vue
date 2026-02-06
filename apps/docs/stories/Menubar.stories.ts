@@ -16,7 +16,7 @@ import {
   MenubarSub,
   MenubarSubTrigger,
   MenubarSubContent,
-} from '@novavue/ui/menubar'
+} from '@nova-vue/ui/menubar'
 
 const meta = {
   title: 'Components/Menubar',

@@ -2,9 +2,9 @@
 import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { Icon } from '@iconify/vue'
-import { Button } from '@novavue/ui/button'
-import { Separator } from '@novavue/ui/separator'
-import { Tooltip, TooltipTrigger, TooltipContent } from '@novavue/ui/tooltip'
+import { Button } from '@nova-vue/ui/button'
+import { Separator } from '@nova-vue/ui/separator'
+import { Tooltip, TooltipTrigger, TooltipContent } from '@nova-vue/ui/tooltip'
 
 defineProps<{
   collapsed: boolean

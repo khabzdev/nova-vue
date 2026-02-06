@@ -7,7 +7,7 @@ import {
   NavigationMenuContent,
   NavigationMenuLink,
   NavigationMenuViewport,
-} from '@novavue/ui/navigation-menu'
+} from '@nova-vue/ui/navigation-menu'
 
 const meta = {
   title: 'Components/NavigationMenu',

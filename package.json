@@ -1,10 +1,10 @@
 {
-  "name": "novavue",
+  "name": "nova-vue",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "playground": "turbo run dev --filter=@novavue/playground",
+    "playground": "turbo run dev --filter=@nova-vue/playground",
     "lint": "oxlint --ignore-path .gitignore .",
     "lint:fix": "oxlint --fix --ignore-path .gitignore .",
     "type-check": "turbo run type-check"

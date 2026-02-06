@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { ScrollArea } from '@novavue/ui/scroll-area'
-import { Separator } from '@novavue/ui/separator'
+import { ScrollArea } from '@nova-vue/ui/scroll-area'
+import { Separator } from '@nova-vue/ui/separator'
 
 const meta = {
   title: 'Components/ScrollArea',

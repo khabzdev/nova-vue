@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@iconify/vue": "5.0.0",
-    "@novavue/colors": "workspace:*",
-    "@novavue/ui": "workspace:*"
+    "@nova-vue/colors": "workspace:*",
+    "@nova-vue/ui": "workspace:*"
   }
 }

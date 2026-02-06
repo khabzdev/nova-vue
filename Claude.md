@@ -365,9 +365,9 @@ Support tree-shakeable imports via package.json exports:
 
 Usage:
 ```ts
-import { Button } from '@novavue/ui/button'
-import { Dialog, DialogContent } from '@novavue/ui/dialog'
-import '@novavue/ui/styles.css'
+import { Button } from '@nova-vue/ui/button'
+import { Dialog, DialogContent } from '@nova-vue/ui/dialog'
+import '@nova-vue/ui/styles.css'
 ```
 
 ## Creating New Components

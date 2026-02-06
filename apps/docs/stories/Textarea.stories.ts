@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Textarea } from '@novavue/ui/textarea'
-import { Label } from '@novavue/ui/label'
+import { Textarea } from '@nova-vue/ui/textarea'
+import { Label } from '@nova-vue/ui/label'
 
 const meta = {
   title: 'Components/Textarea',

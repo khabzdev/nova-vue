@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Alert, AlertDescription, AlertTitle } from '@novavue/ui/alert'
+import { Alert, AlertDescription, AlertTitle } from '@nova-vue/ui/alert'
 
 const meta = {
   title: 'Components/Alert',

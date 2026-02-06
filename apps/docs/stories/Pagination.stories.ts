@@ -9,7 +9,7 @@ import {
   PaginationFirst,
   PaginationLast,
   PaginationEllipsis,
-} from '@novavue/ui/pagination'
+} from '@nova-vue/ui/pagination'
 
 const meta = {
   title: 'Components/Pagination',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@novavue/ui/accordion'
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@nova-vue/ui/accordion'
 
 const meta = {
   title: 'Components/Accordion',

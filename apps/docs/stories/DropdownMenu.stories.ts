@@ -15,8 +15,8 @@ import {
   DropdownMenuSub,
   DropdownMenuSubTrigger,
   DropdownMenuSubContent,
-} from '@novavue/ui/dropdown-menu'
-import { Button } from '@novavue/ui/button'
+} from '@nova-vue/ui/dropdown-menu'
+import { Button } from '@nova-vue/ui/button'
 
 const meta = {
   title: 'Components/DropdownMenu',

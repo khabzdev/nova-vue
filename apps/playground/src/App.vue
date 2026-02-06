@@ -5,10 +5,10 @@ import {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from '@novavue/ui/accordion'
-import { Avatar, AvatarImage, AvatarFallback } from '@novavue/ui/avatar'
-import { Badge } from '@novavue/ui/badge'
-import { Button } from '@novavue/ui/button'
+} from '@nova-vue/ui/accordion'
+import { Avatar, AvatarImage, AvatarFallback } from '@nova-vue/ui/avatar'
+import { Badge } from '@nova-vue/ui/badge'
+import { Button } from '@nova-vue/ui/button'
 import {
   Card,
   CardHeader,
@@ -16,8 +16,8 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from '@novavue/ui/card'
-import { Checkbox } from '@novavue/ui/checkbox'
+} from '@nova-vue/ui/card'
+import { Checkbox } from '@nova-vue/ui/checkbox'
 import {
   Dialog,
   DialogTrigger,
@@ -27,13 +27,13 @@ import {
   DialogDescription,
   DialogFooter,
   DialogClose,
-} from '@novavue/ui/dialog'
-import { Input } from '@novavue/ui/input'
-import { InputGroup, InputGroupInput, InputGroupAddon } from '@novavue/ui/input-group'
-import { Label } from '@novavue/ui/label'
-import { Popover, PopoverTrigger, PopoverContent } from '@novavue/ui/popover'
-import { ScrollArea } from '@novavue/ui/scroll-area'
-import { Textarea } from '@novavue/ui/textarea'
+} from '@nova-vue/ui/dialog'
+import { Input } from '@nova-vue/ui/input'
+import { InputGroup, InputGroupInput, InputGroupAddon } from '@nova-vue/ui/input-group'
+import { Label } from '@nova-vue/ui/label'
+import { Popover, PopoverTrigger, PopoverContent } from '@nova-vue/ui/popover'
+import { ScrollArea } from '@nova-vue/ui/scroll-area'
+import { Textarea } from '@nova-vue/ui/textarea'
 import {
   Select,
   SelectTrigger,
@@ -43,14 +43,14 @@ import {
   SelectGroup,
   SelectLabel,
   SelectSeparator,
-} from '@novavue/ui/select'
-import { Separator } from '@novavue/ui/separator'
-import { Slider } from '@novavue/ui/slider'
-import { Switch } from '@novavue/ui/switch'
-import { Toaster, useToast } from '@novavue/ui/toast'
-import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '@novavue/ui/tooltip'
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@novavue/ui/tabs'
-import { Alert, AlertTitle, AlertDescription } from '@novavue/ui/alert'
+} from '@nova-vue/ui/select'
+import { Separator } from '@nova-vue/ui/separator'
+import { Slider } from '@nova-vue/ui/slider'
+import { Switch } from '@nova-vue/ui/switch'
+import { Toaster, useToast } from '@nova-vue/ui/toast'
+import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '@nova-vue/ui/tooltip'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@nova-vue/ui/tabs'
+import { Alert, AlertTitle, AlertDescription } from '@nova-vue/ui/alert'
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -59,7 +59,7 @@ import {
   NavigationMenuContent,
   NavigationMenuLink,
   NavigationMenuViewport,
-} from '@novavue/ui/navigation-menu'
+} from '@nova-vue/ui/navigation-menu'
 import { Icon } from '@iconify/vue'
 
 const { toast } = useToast()

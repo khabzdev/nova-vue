@@ -4,7 +4,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from '@novavue/ui/tabs'
+} from '@nova-vue/ui/tabs'
 
 const meta = {
   title: 'Components/Tabs',

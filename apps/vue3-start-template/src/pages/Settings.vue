@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, inject } from 'vue'
 import { Icon } from '@iconify/vue'
-import { Button } from '@novavue/ui/button'
+import { Button } from '@nova-vue/ui/button'
 import {
   Card,
   CardHeader,
@@ -9,21 +9,21 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from '@novavue/ui/card'
-import { Input } from '@novavue/ui/input'
-import { Label } from '@novavue/ui/label'
-import { Textarea } from '@novavue/ui/textarea'
-import { Switch } from '@novavue/ui/switch'
-import { Separator } from '@novavue/ui/separator'
+} from '@nova-vue/ui/card'
+import { Input } from '@nova-vue/ui/input'
+import { Label } from '@nova-vue/ui/label'
+import { Textarea } from '@nova-vue/ui/textarea'
+import { Switch } from '@nova-vue/ui/switch'
+import { Separator } from '@nova-vue/ui/separator'
 import {
   Select,
   SelectTrigger,
   SelectValue,
   SelectContent,
   SelectItem,
-} from '@novavue/ui/select'
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@novavue/ui/tabs'
-import { useToast } from '@novavue/ui/toast'
+} from '@nova-vue/ui/select'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@nova-vue/ui/tabs'
+import { useToast } from '@nova-vue/ui/toast'
 
 const { toast } = useToast()
 
@@ -257,7 +257,7 @@ function saveNotifications() {
                 />
               </div>
               <p class="text-sm text-muted-foreground">
-                Choose your preferred accent color. Import a color theme from @novavue/colors.
+                Choose your preferred accent color. Import a color theme from @nova-vue/colors.
               </p>
             </div>
           </CardContent>

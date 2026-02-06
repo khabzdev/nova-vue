@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import { Button } from '@novavue/ui/button'
+import { Button } from '@nova-vue/ui/button'
 import {
   Dialog,
   DialogContent,
@@ -10,9 +10,9 @@ import {
   DialogTitle,
   DialogTrigger,
   DialogClose,
-} from '@novavue/ui/dialog'
-import { Input } from '@novavue/ui/input'
-import { Label } from '@novavue/ui/label'
+} from '@nova-vue/ui/dialog'
+import { Input } from '@nova-vue/ui/input'
+import { Label } from '@nova-vue/ui/label'
 
 const meta = {
   title: 'Components/Dialog',

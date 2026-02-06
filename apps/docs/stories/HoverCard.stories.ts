@@ -3,9 +3,9 @@ import {
   HoverCard,
   HoverCardTrigger,
   HoverCardContent,
-} from '@novavue/ui/hover-card'
-import { Avatar, AvatarImage, AvatarFallback } from '@novavue/ui/avatar'
-import { Button } from '@novavue/ui/button'
+} from '@nova-vue/ui/hover-card'
+import { Avatar, AvatarImage, AvatarFallback } from '@nova-vue/ui/avatar'
+import { Button } from '@nova-vue/ui/button'
 
 const meta = {
   title: 'Components/HoverCard',

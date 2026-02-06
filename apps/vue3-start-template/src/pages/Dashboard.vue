@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Icon } from '@iconify/vue'
-import { Button } from '@novavue/ui/button'
+import { Button } from '@nova-vue/ui/button'
 import {
   Card,
   CardHeader,
@@ -9,10 +9,10 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from '@novavue/ui/card'
-import { Badge } from '@novavue/ui/badge'
-import { Avatar, AvatarFallback } from '@novavue/ui/avatar'
-import { useToast } from '@novavue/ui/toast'
+} from '@nova-vue/ui/card'
+import { Badge } from '@nova-vue/ui/badge'
+import { Avatar, AvatarFallback } from '@nova-vue/ui/avatar'
+import { useToast } from '@nova-vue/ui/toast'
 
 const { toast } = useToast()
 

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { AspectRatio } from '@novavue/ui/aspect-ratio'
+import { AspectRatio } from '@nova-vue/ui/aspect-ratio'
 
 const meta = {
   title: 'Components/AspectRatio',
