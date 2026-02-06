@@ -1,6 +1,28 @@
 {
   "name": "@lettuce/colors",
   "version": "0.1.0",
+  "description": "Color themes for Lettuce UI - blue, green, red, rose, orange, yellow, violet",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/lettuce",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/lettuce.git",
+    "directory": "packages/colors"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/lettuce/issues"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "themes",
+    "colors",
+    "css",
+    "tailwindcss",
+    "lettuce-ui",
+    "design-tokens"
+  ],
   "type": "module",
   "exports": {
     "./default.css": "./src/default.css",
@@ -19,6 +41,6 @@
     "**/*.css"
   ],
   "peerDependencies": {
-    "@lettuce/ui": "workspace:*"
+    "@lettuce/ui": ">=0.1.0"
   }
 }
