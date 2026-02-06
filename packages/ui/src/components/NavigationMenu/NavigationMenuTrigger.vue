@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { NavigationMenuTrigger, type NavigationMenuTriggerProps, useForwardProps } from 'reka-ui'
-import { HugeiconsIcon } from '@hugeicons/vue'
-import { ArrowDown01Icon } from '@hugeicons/core-free-icons'
+import { Icon } from '@iconify/vue'
 import { cn } from '@/utils/cn'
 
 interface Props extends NavigationMenuTriggerProps {
@@ -44,9 +43,10 @@ const classes = computed(() =>
 <template>
   <NavigationMenuTrigger v-bind="forwarded" :class="classes">
     <slot />
-    <HugeiconsIcon
-      :icon="ArrowDown01Icon"
-      :size="14"
+    <Icon
+      icon="hugeicons:arrow-down-01"
+      width="14"
+      height="14"
       class="relative top-px ml-0.5 transition-transform duration-200 group-data-[state=open]:rotate-180"
       aria-hidden="true"
     />

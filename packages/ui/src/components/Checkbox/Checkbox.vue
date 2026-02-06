@@ -2,8 +2,7 @@
 import { computed, toRefs } from 'vue'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { CheckboxRoot, CheckboxIndicator } from 'reka-ui'
-import { HugeiconsIcon } from '@hugeicons/vue'
-import { Tick02Icon, MinusSignIcon } from '@hugeicons/core-free-icons'
+import { Icon } from '@iconify/vue'
 import { cn } from '@/utils/cn'
 
 const checkboxVariants = cva(
@@ -87,16 +86,18 @@ const classes = computed(() =>
     @update:checked="emit('update:checked', $event)"
   >
     <CheckboxIndicator class="flex items-center justify-center text-current">
-      <HugeiconsIcon
+      <Icon
         v-if="checked === 'indeterminate'"
-        :icon="MinusSignIcon"
-        :size="12"
+        icon="hugeicons:minus-sign"
+        width="12"
+        height="12"
         class="sm:size-2.5"
       />
-      <HugeiconsIcon
+      <Icon
         v-else
-        :icon="Tick02Icon"
-        :size="12"
+        icon="hugeicons:tick-02"
+        width="12"
+        height="12"
         class="sm:size-2.5"
       />
     </CheckboxIndicator>

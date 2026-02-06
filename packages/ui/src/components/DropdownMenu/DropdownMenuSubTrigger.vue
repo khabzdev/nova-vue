@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { DropdownMenuSubTrigger, type DropdownMenuSubTriggerProps, useForwardProps } from 'reka-ui'
-import { HugeiconsIcon } from '@hugeicons/vue'
-import { ArrowRight01Icon } from '@hugeicons/core-free-icons'
+import { Icon } from '@iconify/vue'
 import { cn } from '@/utils/cn'
 
 interface Props extends DropdownMenuSubTriggerProps {
@@ -40,6 +39,6 @@ const classes = computed(() =>
 <template>
   <DropdownMenuSubTrigger v-bind="forwarded" :class="classes">
     <slot />
-    <HugeiconsIcon :icon="ArrowRight01Icon" :size="16" class="ml-auto" />
+    <Icon icon="hugeicons:arrow-right-01" width="16" height="16" class="ml-auto" />
   </DropdownMenuSubTrigger>
 </template>

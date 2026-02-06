@@ -1,18 +1,18 @@
 {
   "name": "lettuce",
   "private": true,
-  "workspaces": ["packages/*", "apps/*"],
   "scripts": {
-    "build": "bun run --filter '@lettuce/ui' build",
-    "dev": "bun run --filter '@lettuce/ui' dev",
-    "playground": "bun run --filter '@lettuce/playground' dev",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "playground": "turbo run dev --filter=@lettuce/playground",
     "lint": "oxlint --ignore-path .gitignore .",
     "lint:fix": "oxlint --fix --ignore-path .gitignore .",
-    "type-check": "bun run --filter '@lettuce/ui' type-check"
+    "type-check": "turbo run type-check"
   },
   "devDependencies": {
-    "@types/bun": "latest",
     "oxlint": "^0.15.0",
-    "typescript": "^5.7.0"
-  }
+    "turbo": "^2.8.3",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "pnpm@10.5.2"
 }

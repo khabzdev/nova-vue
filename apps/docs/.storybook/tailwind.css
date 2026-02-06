@@ -1,5 +1,5 @@
 /* Import UI package styles (includes Tailwind base + theme variables) */
-@import "@lettuce/ui/styles.css";
+@import "../../../packages/ui/dist/ui.css";
 
 /* Add source paths for scanning in docs app */
 @source "../stories/**/*.{ts,tsx,vue}";

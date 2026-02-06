@@ -7,8 +7,7 @@ import {
   SelectItemText,
   useForwardProps,
 } from 'reka-ui'
-import { HugeiconsIcon } from '@hugeicons/vue'
-import { Tick02Icon } from '@hugeicons/core-free-icons'
+import { Icon } from '@iconify/vue'
 import { cn } from '@/utils/cn'
 
 interface Props extends SelectItemProps {
@@ -46,7 +45,7 @@ const classes = computed(() =>
   <SelectItem v-bind="forwarded" :class="classes">
     <span class="absolute right-2 flex size-4 items-center justify-center">
       <SelectItemIndicator>
-        <HugeiconsIcon :icon="Tick02Icon" :size="14" />
+        <Icon icon="hugeicons:tick-02" width="14" height="14" />
       </SelectItemIndicator>
     </span>
     <SelectItemText>

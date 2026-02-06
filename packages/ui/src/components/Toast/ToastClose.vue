@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { computed, toRefs } from 'vue'
 import { ToastClose } from 'reka-ui'
-import { HugeiconsIcon } from '@hugeicons/vue'
-import { Cancel01Icon } from '@hugeicons/core-free-icons'
+import { Icon } from '@iconify/vue'
 import { cn } from '@/utils/cn'
 
 interface Props {
@@ -34,7 +33,7 @@ const classes = computed(() =>
 
 <template>
   <ToastClose :class="classes" v-bind="$attrs">
-    <HugeiconsIcon :icon="Cancel01Icon" :size="14" />
+    <Icon icon="hugeicons:cancel-01" width="14" height="14" />
     <span class="sr-only">Close</span>
   </ToastClose>
 </template>

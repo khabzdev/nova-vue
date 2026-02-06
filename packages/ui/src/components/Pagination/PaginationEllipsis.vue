@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { PaginationEllipsis, type PaginationEllipsisProps, useForwardProps } from 'reka-ui'
-import { HugeiconsIcon } from '@hugeicons/vue'
-import { MoreHorizontalIcon } from '@hugeicons/core-free-icons'
+import { Icon } from '@iconify/vue'
 import { cn } from '@/utils/cn'
 
 interface Props extends PaginationEllipsisProps {
@@ -23,7 +22,7 @@ const classes = computed(() =>
 <template>
   <PaginationEllipsis v-bind="forwarded" :class="classes">
     <slot>
-      <HugeiconsIcon :icon="MoreHorizontalIcon" :size="16" />
+      <Icon icon="hugeicons:more-horizontal" width="16" height="16" />
     </slot>
   </PaginationEllipsis>
 </template>

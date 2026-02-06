@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { MenubarSubTrigger, type MenubarSubTriggerProps, useForwardProps } from 'reka-ui'
-import { HugeiconsIcon } from '@hugeicons/vue'
-import { ArrowRight01Icon } from '@hugeicons/core-free-icons'
+import { Icon } from '@iconify/vue'
 import { cn } from '@/utils/cn'
 
 interface Props extends MenubarSubTriggerProps {
@@ -40,6 +39,6 @@ const classes = computed(() =>
 <template>
   <MenubarSubTrigger v-bind="forwarded" :class="classes">
     <slot />
-    <HugeiconsIcon :icon="ArrowRight01Icon" :size="16" class="ml-auto" />
+    <Icon icon="hugeicons:arrow-right-01" width="16" height="16" class="ml-auto" />
   </MenubarSubTrigger>
 </template>

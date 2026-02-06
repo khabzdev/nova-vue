@@ -12,8 +12,12 @@
     "./yellow.css": "./src/yellow.css",
     "./violet.css": "./src/violet.css"
   },
-  "files": ["src"],
-  "sideEffects": ["**/*.css"],
+  "files": [
+    "src"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "peerDependencies": {
     "@lettuce/ui": "workspace:*"
   }

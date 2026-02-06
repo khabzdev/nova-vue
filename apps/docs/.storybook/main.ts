@@ -21,6 +21,11 @@ const config: StorybookConfig = {
     const tailwindcss = (await import('@tailwindcss/vite')).default
     config.plugins = config.plugins || []
     config.plugins.push(tailwindcss())
+    
+    // Ensure workspace symlinks are properly resolved
+    config.resolve = config.resolve || {}
+    config.resolve.preserveSymlinks = false
+    
     return config
   },
 }

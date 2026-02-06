@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { PaginationFirst, type PaginationFirstProps, useForwardProps } from 'reka-ui'
-import { HugeiconsIcon } from '@hugeicons/vue'
-import { ArrowLeftDoubleIcon } from '@hugeicons/core-free-icons'
+import { Icon } from '@iconify/vue'
 import { cn } from '@/utils/cn'
 
 interface Props extends PaginationFirstProps {
@@ -35,7 +34,7 @@ const classes = computed(() =>
 <template>
   <PaginationFirst v-bind="forwarded" :class="classes">
     <slot>
-      <HugeiconsIcon :icon="ArrowLeftDoubleIcon" :size="16" />
+      <Icon icon="hugeicons:arrow-left-double" width="16" height="16" />
     </slot>
   </PaginationFirst>
 </template>

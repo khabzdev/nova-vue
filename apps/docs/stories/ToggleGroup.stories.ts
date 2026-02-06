@@ -1,16 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
 import { ToggleGroup, ToggleGroupItem } from '@lettuce/ui/toggle-group'
-import { HugeiconsIcon } from '@hugeicons/vue'
-import {
-  TextBoldIcon,
-  TextItalicIcon,
-  TextUnderlineIcon,
-  AlignLeftIcon,
-  AlignCenter,
-  AlignRightIcon,
-  AlignJustify,
-} from '@hugeicons/core-free-icons'
+import { Icon } from '@iconify/vue'
 
 const meta = {
   title: 'Components/ToggleGroup',
@@ -23,21 +14,21 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render: () => ({
-    components: { ToggleGroup, ToggleGroupItem, HugeiconsIcon },
+    components: { ToggleGroup, ToggleGroupItem, Icon },
     setup() {
       const value = ref('center')
-      return { value, AlignLeftIcon, AlignCenter, AlignRightIcon }
+      return { value }
     },
     template: `
       <ToggleGroup v-model="value" type="single">
         <ToggleGroupItem value="left" aria-label="Align left">
-          <HugeiconsIcon :icon="AlignLeftIcon" :size="16" />
+          <Icon icon="hugeicons:align-left" width="16" height="16" />
         </ToggleGroupItem>
         <ToggleGroupItem value="center" aria-label="Align center">
-          <HugeiconsIcon :icon="AlignCenterIcon" :size="16" />
+          <Icon icon="hugeicons:align-center" width="16" height="16" />
         </ToggleGroupItem>
         <ToggleGroupItem value="right" aria-label="Align right">
-          <HugeiconsIcon :icon="AlignRightIcon" :size="16" />
+          <Icon icon="hugeicons:align-right" width="16" height="16" />
         </ToggleGroupItem>
       </ToggleGroup>
     `,
@@ -46,24 +37,24 @@ export const Default: Story = {
 
 export const Outline: Story = {
   render: () => ({
-    components: { ToggleGroup, ToggleGroupItem, HugeiconsIcon },
+    components: { ToggleGroup, ToggleGroupItem, Icon },
     setup() {
       const value = ref('center')
-      return { value, AlignLeftIcon, AlignCenter, AlignRightIcon, AlignJustify }
+      return { value }
     },
     template: `
       <ToggleGroup v-model="value" type="single" variant="outline">
         <ToggleGroupItem value="left" aria-label="Align left">
-          <HugeiconsIcon :icon="AlignLeftIcon" :size="16" />
+          <Icon icon="hugeicons:align-left" width="16" height="16" />
         </ToggleGroupItem>
         <ToggleGroupItem value="center" aria-label="Align center">
-          <HugeiconsIcon :icon="AlignCenterIcon" :size="16" />
+          <Icon icon="hugeicons:align-center" width="16" height="16" />
         </ToggleGroupItem>
         <ToggleGroupItem value="right" aria-label="Align right">
-          <HugeiconsIcon :icon="AlignRightIcon" :size="16" />
+          <Icon icon="hugeicons:align-right" width="16" height="16" />
         </ToggleGroupItem>
         <ToggleGroupItem value="justify" aria-label="Justify">
-          <HugeiconsIcon :icon="AlignJustifyIcon" :size="16" />
+          <Icon icon="hugeicons:align-justify" width="16" height="16" />
         </ToggleGroupItem>
       </ToggleGroup>
     `,
@@ -72,21 +63,21 @@ export const Outline: Story = {
 
 export const Multiple: Story = {
   render: () => ({
-    components: { ToggleGroup, ToggleGroupItem, HugeiconsIcon },
+    components: { ToggleGroup, ToggleGroupItem, Icon },
     setup() {
       const value = ref(['bold'])
-      return { value, TextBoldIcon, TextItalicIcon, TextUnderlineIcon }
+      return { value }
     },
     template: `
       <ToggleGroup v-model="value" type="multiple">
         <ToggleGroupItem value="bold" aria-label="Bold">
-          <HugeiconsIcon :icon="TextBoldIcon" :size="16" />
+          <Icon icon="hugeicons:text-bold" width="16" height="16" />
         </ToggleGroupItem>
         <ToggleGroupItem value="italic" aria-label="Italic">
-          <HugeiconsIcon :icon="TextItalicIcon" :size="16" />
+          <Icon icon="hugeicons:text-italic" width="16" height="16" />
         </ToggleGroupItem>
         <ToggleGroupItem value="underline" aria-label="Underline">
-          <HugeiconsIcon :icon="TextUnderlineIcon" :size="16" />
+          <Icon icon="hugeicons:text-underline" width="16" height="16" />
         </ToggleGroupItem>
       </ToggleGroup>
     `,
@@ -95,12 +86,12 @@ export const Multiple: Story = {
 
 export const Sizes: Story = {
   render: () => ({
-    components: { ToggleGroup, ToggleGroupItem, HugeiconsIcon },
+    components: { ToggleGroup, ToggleGroupItem, Icon },
     setup() {
       const sm = ref('center')
       const md = ref('center')
       const lg = ref('center')
-      return { sm, md, lg, AlignLeftIcon, AlignCenter, AlignRightIcon }
+      return { sm, md, lg }
     },
     template: `
       <div class="flex flex-col gap-4">
@@ -108,13 +99,13 @@ export const Sizes: Story = {
           <p class="text-sm font-medium mb-2">Small</p>
           <ToggleGroup v-model="sm" type="single" size="sm" variant="outline">
             <ToggleGroupItem value="left" aria-label="Align left">
-              <HugeiconsIcon :icon="AlignLeftIcon" :size="14" />
+              <Icon icon="hugeicons:align-left" width="14" height="14" />
             </ToggleGroupItem>
             <ToggleGroupItem value="center" aria-label="Align center">
-              <HugeiconsIcon :icon="AlignCenterIcon" :size="14" />
+              <Icon icon="hugeicons:align-center" width="14" height="14" />
             </ToggleGroupItem>
             <ToggleGroupItem value="right" aria-label="Align right">
-              <HugeiconsIcon :icon="AlignRightIcon" :size="14" />
+              <Icon icon="hugeicons:align-right" width="14" height="14" />
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
@@ -122,13 +113,13 @@ export const Sizes: Story = {
           <p class="text-sm font-medium mb-2">Default</p>
           <ToggleGroup v-model="md" type="single" variant="outline">
             <ToggleGroupItem value="left" aria-label="Align left">
-              <HugeiconsIcon :icon="AlignLeftIcon" :size="16" />
+              <Icon icon="hugeicons:align-left" width="16" height="16" />
             </ToggleGroupItem>
             <ToggleGroupItem value="center" aria-label="Align center">
-              <HugeiconsIcon :icon="AlignCenterIcon" :size="16" />
+              <Icon icon="hugeicons:align-center" width="16" height="16" />
             </ToggleGroupItem>
             <ToggleGroupItem value="right" aria-label="Align right">
-              <HugeiconsIcon :icon="AlignRightIcon" :size="16" />
+              <Icon icon="hugeicons:align-right" width="16" height="16" />
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
@@ -136,13 +127,13 @@ export const Sizes: Story = {
           <p class="text-sm font-medium mb-2">Large</p>
           <ToggleGroup v-model="lg" type="single" size="lg" variant="outline">
             <ToggleGroupItem value="left" aria-label="Align left">
-              <HugeiconsIcon :icon="AlignLeftIcon" :size="18" />
+              <Icon icon="hugeicons:align-left" width="18" height="18" />
             </ToggleGroupItem>
             <ToggleGroupItem value="center" aria-label="Align center">
-              <HugeiconsIcon :icon="AlignCenterIcon" :size="18" />
+              <Icon icon="hugeicons:align-center" width="18" height="18" />
             </ToggleGroupItem>
             <ToggleGroupItem value="right" aria-label="Align right">
-              <HugeiconsIcon :icon="AlignRightIcon" :size="18" />
+              <Icon icon="hugeicons:align-right" width="18" height="18" />
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
@@ -153,21 +144,21 @@ export const Sizes: Story = {
 
 export const Disabled: Story = {
   render: () => ({
-    components: { ToggleGroup, ToggleGroupItem, HugeiconsIcon },
+    components: { ToggleGroup, ToggleGroupItem, Icon },
     setup() {
       const value = ref('center')
-      return { value, AlignLeftIcon, AlignCenter, AlignRightIcon }
+      return { value }
     },
     template: `
       <ToggleGroup v-model="value" type="single" disabled variant="outline">
         <ToggleGroupItem value="left" aria-label="Align left">
-          <HugeiconsIcon :icon="AlignLeftIcon" :size="16" />
+          <Icon icon="hugeicons:align-left" width="16" height="16" />
         </ToggleGroupItem>
         <ToggleGroupItem value="center" aria-label="Align center">
-          <HugeiconsIcon :icon="AlignCenterIcon" :size="16" />
+          <Icon icon="hugeicons:align-center" width="16" height="16" />
         </ToggleGroupItem>
         <ToggleGroupItem value="right" aria-label="Align right">
-          <HugeiconsIcon :icon="AlignRightIcon" :size="16" />
+          <Icon icon="hugeicons:align-right" width="16" height="16" />
         </ToggleGroupItem>
       </ToggleGroup>
     `,

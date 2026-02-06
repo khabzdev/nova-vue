@@ -7,8 +7,7 @@ import {
   MenubarItemIndicator,
   useForwardPropsEmits,
 } from 'reka-ui'
-import { HugeiconsIcon } from '@hugeicons/vue'
-import { Tick02Icon } from '@hugeicons/core-free-icons'
+import { Icon } from '@iconify/vue'
 import { cn } from '@/utils/cn'
 
 interface Props extends MenubarCheckboxItemProps {
@@ -47,7 +46,7 @@ const classes = computed(() =>
   <MenubarCheckboxItem v-bind="forwarded" :class="classes">
     <span class="absolute left-2 flex size-4 items-center justify-center">
       <MenubarItemIndicator>
-        <HugeiconsIcon :icon="Tick02Icon" :size="14" />
+        <Icon icon="hugeicons:tick-02" width="14" height="14" />
       </MenubarItemIndicator>
     </span>
     <slot />

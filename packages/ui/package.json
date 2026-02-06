@@ -183,16 +183,19 @@
     },
     "./styles.css": "./dist/ui.css"
   },
-  "files": ["dist"],
-  "sideEffects": ["**/*.css"],
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "scripts": {
     "build": "vite build",
     "dev": "vite build --watch",
     "type-check": "vue-tsc --noEmit"
   },
   "peerDependencies": {
-    "@hugeicons/core-free-icons": "^3.0.0",
-    "@hugeicons/vue": "^1.0.0",
+    "@iconify/vue": "^5.0.0",
     "vue": "^3.4.0"
   },
   "dependencies": {
@@ -203,8 +206,7 @@
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@hugeicons/core-free-icons": "^3.0.0",
-    "@hugeicons/vue": "^1.0.0",
+    "@iconify/vue": "5.0.0",
     "@tailwindcss/postcss": "^4.0.0",
     "@vitejs/plugin-vue": "^5.2.0",
     "postcss": "^8.5.0",

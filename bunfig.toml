@@ -1,7 +1,0 @@
-[install]
-# Use exact versions for reproducible builds
-exact = true
-
-[install.lockfile]
-# Save lockfile in text format for better git diffs
-print = "yarn"

@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
 import { Toggle } from '@lettuce/ui/toggle'
-import { HugeiconsIcon } from '@hugeicons/vue'
-import { TextBoldIcon, TextItalicIcon, TextUnderlineIcon } from '@hugeicons/core-free-icons'
+import { Icon } from '@iconify/vue'
 
 const meta = {
   title: 'Components/Toggle',
@@ -28,14 +27,14 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render: (args) => ({
-    components: { Toggle, HugeiconsIcon },
+    components: { Toggle, Icon },
     setup() {
       const pressed = ref(false)
-      return { args, pressed, TextBoldIcon }
+      return { args, pressed }
     },
     template: `
       <Toggle v-bind="args" v-model="pressed" aria-label="Toggle bold">
-        <HugeiconsIcon :icon="TextBoldIcon" :size="16" />
+        <Icon icon="hugeicons:text-bold" width="16" height="16" />
       </Toggle>
     `,
   }),
@@ -43,14 +42,14 @@ export const Default: Story = {
 
 export const WithText: Story = {
   render: () => ({
-    components: { Toggle, HugeiconsIcon },
+    components: { Toggle, Icon },
     setup() {
       const pressed = ref(false)
-      return { pressed, TextItalicIcon }
+      return { pressed }
     },
     template: `
       <Toggle v-model="pressed" aria-label="Toggle italic">
-        <HugeiconsIcon :icon="TextItalicIcon" :size="16" />
+        <Icon icon="hugeicons:text-italic" width="16" height="16" />
         Italic
       </Toggle>
     `,
@@ -59,14 +58,14 @@ export const WithText: Story = {
 
 export const Outline: Story = {
   render: () => ({
-    components: { Toggle, HugeiconsIcon },
+    components: { Toggle, Icon },
     setup() {
       const pressed = ref(false)
-      return { pressed, TextUnderlineIcon }
+      return { pressed }
     },
     template: `
       <Toggle v-model="pressed" variant="outline" aria-label="Toggle underline">
-        <HugeiconsIcon :icon="TextUnderlineIcon" :size="16" />
+        <Icon icon="hugeicons:text-underline" width="16" height="16" />
       </Toggle>
     `,
   }),
@@ -74,23 +73,23 @@ export const Outline: Story = {
 
 export const Sizes: Story = {
   render: () => ({
-    components: { Toggle, HugeiconsIcon },
+    components: { Toggle, Icon },
     setup() {
       const sm = ref(false)
       const md = ref(true)
       const lg = ref(false)
-      return { sm, md, lg, TextBoldIcon }
+      return { sm, md, lg }
     },
     template: `
       <div class="flex items-center gap-4">
         <Toggle v-model="sm" size="sm" aria-label="Toggle small">
-          <HugeiconsIcon :icon="TextBoldIcon" :size="14" />
+          <Icon icon="hugeicons:text-bold" width="14" height="14" />
         </Toggle>
         <Toggle v-model="md" aria-label="Toggle default">
-          <HugeiconsIcon :icon="TextBoldIcon" :size="16" />
+          <Icon icon="hugeicons:text-bold" width="16" height="16" />
         </Toggle>
         <Toggle v-model="lg" size="lg" aria-label="Toggle large">
-          <HugeiconsIcon :icon="TextBoldIcon" :size="18" />
+          <Icon icon="hugeicons:text-bold" width="18" height="18" />
         </Toggle>
       </div>
     `,
@@ -99,17 +98,14 @@ export const Sizes: Story = {
 
 export const Disabled: Story = {
   render: () => ({
-    components: { Toggle, HugeiconsIcon },
-    setup() {
-      return { TextBoldIcon }
-    },
+    components: { Toggle, Icon },
     template: `
       <div class="flex items-center gap-4">
         <Toggle disabled aria-label="Disabled toggle">
-          <HugeiconsIcon :icon="TextBoldIcon" :size="16" />
+          <Icon icon="hugeicons:text-bold" width="16" height="16" />
         </Toggle>
         <Toggle disabled default-value aria-label="Disabled pressed toggle">
-          <HugeiconsIcon :icon="TextBoldIcon" :size="16" />
+          <Icon icon="hugeicons:text-bold" width="16" height="16" />
         </Toggle>
       </div>
     `,

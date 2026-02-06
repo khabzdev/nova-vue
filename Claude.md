@@ -9,37 +9,36 @@ A Vue 3 component library built with Reka UI primitives, following COSS UI styli
 - **Motion Vue (motion-v)** for animations
 - **Tailwind CSS v4** with `@tailwindcss/postcss`
 - **class-variance-authority (CVA)** for variant management
-- **@hugeicons/vue** + **@hugeicons/core-free-icons** for icons
+- **@iconify/vue** for icons (using Hugeicons icon set)
 - **TypeScript** throughout
 - **Bun** as package manager and runtime
 
-## Icons (Hugeicons)
+## Icons (Iconify)
 
-Use `HugeiconsIcon` component with icon data from `@hugeicons/core-free-icons`:
+Use the `Icon` component from `@iconify/vue` with Hugeicons icon names:
 
 ```vue
 <script setup lang="ts">
-import { HugeiconsIcon } from '@hugeicons/vue'
-import { ArrowDown01Icon, Cancel01Icon, Tick02Icon } from '@hugeicons/core-free-icons'
+import { Icon } from '@iconify/vue'
 </script>
 
 <template>
-  <HugeiconsIcon :icon="ArrowDown01Icon" :size="16" />
-  <HugeiconsIcon :icon="Cancel01Icon" :size="16" class="opacity-64" />
-  <HugeiconsIcon :icon="Tick02Icon" :size="14" />
+  <Icon icon="hugeicons:arrow-down-01" width="16" height="16" />
+  <Icon icon="hugeicons:cancel-01" width="16" height="16" class="opacity-64" />
+  <Icon icon="hugeicons:tick-02" width="14" height="14" />
 </template>
 ```
 
 **Props:**
-- `icon` - Icon data from `@hugeicons/core-free-icons` (required)
-- `size` - Icon size in pixels (default: 24)
+- `icon` - Icon name in format `collection:icon-name` (e.g., `hugeicons:arrow-down-01`)
+- `width` / `height` - Icon dimensions in pixels
 - `color` - Icon color (default: `currentColor`)
-- `stroke-width` - Stroke width
 
 **Common icons used in components:**
-- `Cancel01Icon` - Close/X button
-- `ArrowDown01Icon` - Dropdown chevrons
-- `Tick02Icon` - Checkmarks
+- `hugeicons:cancel-01` - Close/X button
+- `hugeicons:arrow-down-01` - Dropdown chevrons
+- `hugeicons:tick-02` - Checkmarks
+- `hugeicons:sidebar-left` - Sidebar toggle
 
 ## Component Structure
 

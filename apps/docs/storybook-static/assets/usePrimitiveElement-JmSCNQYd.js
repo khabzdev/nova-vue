@@ -1,0 +1,1 @@
+import{c as r,r as i}from"./vue.esm-bundler-BitZzlT5.js";import{u as l}from"./index-BGV6KQZa.js";function c(){const e=i(),m=r(()=>{var t,n;return["#text","#comment"].includes((t=e.value)==null?void 0:t.$el.nodeName)?(n=e.value)==null?void 0:n.$el.nextElementSibling:l(e)});return{primitiveElement:e,currentElement:m}}export{c as u};

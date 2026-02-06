@@ -9,8 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@hugeicons/core-free-icons": "3.1.1",
-    "@hugeicons/vue": "1.0.4",
+    "@iconify/vue": "5.0.0",
     "@lettuce/themes": "workspace:*",
     "@lettuce/ui": "workspace:*",
     "vue": "^3.5.0"

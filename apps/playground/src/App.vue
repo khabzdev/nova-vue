@@ -60,8 +60,7 @@ import {
   NavigationMenuLink,
   NavigationMenuViewport,
 } from '@lettuce/ui/navigation-menu'
-import { HugeiconsIcon } from '@hugeicons/vue'
-import { Alert02Icon, CheckmarkCircle02Icon, InformationCircleIcon, AlertCircleIcon } from '@hugeicons/core-free-icons'
+import { Icon } from '@iconify/vue'
 
 const { toast } = useToast()
 
@@ -1364,31 +1363,31 @@ onMounted(() => {
 
         <div class="space-y-4 max-w-xl">
           <Alert>
-            <HugeiconsIcon :icon="Alert02Icon" class="size-4" />
+            <Icon icon="hugeicons:alert-02" class="size-4" />
             <AlertTitle>Default Alert</AlertTitle>
             <AlertDescription>This is a default alert for general information.</AlertDescription>
           </Alert>
 
           <Alert variant="info">
-            <HugeiconsIcon :icon="InformationCircleIcon" class="size-4" />
+            <Icon icon="hugeicons:information-circle" class="size-4" />
             <AlertTitle>Info</AlertTitle>
             <AlertDescription>This is an informational alert with helpful details.</AlertDescription>
           </Alert>
 
           <Alert variant="success">
-            <HugeiconsIcon :icon="CheckmarkCircle02Icon" class="size-4" />
+            <Icon icon="hugeicons:checkmark-circle-02" class="size-4" />
             <AlertTitle>Success</AlertTitle>
             <AlertDescription>Your changes have been saved successfully.</AlertDescription>
           </Alert>
 
           <Alert variant="warning">
-            <HugeiconsIcon :icon="AlertCircleIcon" class="size-4" />
+            <Icon icon="hugeicons:alert-circle" class="size-4" />
             <AlertTitle>Warning</AlertTitle>
             <AlertDescription>Please review your changes before proceeding.</AlertDescription>
           </Alert>
 
           <Alert variant="destructive">
-            <HugeiconsIcon :icon="Alert02Icon" class="size-4" />
+            <Icon icon="hugeicons:alert-02" class="size-4" />
             <AlertTitle>Error</AlertTitle>
             <AlertDescription>Something went wrong. Please try again later.</AlertDescription>
           </Alert>
