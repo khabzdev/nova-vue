@@ -2,16 +2,16 @@
   "name": "@novavue/colors",
   "version": "0.1.0",
   "description": "Color themes for Nova Vue - blue, green, red, rose, orange, yellow, violet",
-  "author": "Your Name <your.email@example.com>",
+  "author": "Ndivhuwo Khabubu",
   "license": "MIT",
-  "homepage": "https://github.com/yourusername/novavue",
+  "homepage": "https://github.com/khabzdev/novavue",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/novavue.git",
+    "url": "git+https://github.com/khabzdev/novavue.git",
     "directory": "packages/colors"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/novavue/issues"
+    "url": "https://github.com/khabzdev/novavue/issues"
   },
   "keywords": [
     "vue",
