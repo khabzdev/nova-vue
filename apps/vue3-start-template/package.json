@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@iconify/vue": "5.0.0",
-    "@lettuce/colors": "workspace:*",
-    "@lettuce/ui": "workspace:*",
+    "@novavue/colors": "workspace:*",
+    "@novavue/ui": "workspace:*",
     "vue": "^3.5.0",
     "vue-router": "^4.5.0"
   },

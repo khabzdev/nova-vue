@@ -4,7 +4,7 @@ import { Meta } from '@storybook/blocks'
 
 # Design Tokens
 
-Lettuce UI uses CSS custom properties (design tokens) for theming. This allows you to easily customize colors, spacing, and other visual properties to match your brand.
+Nova Vue uses CSS custom properties (design tokens) for theming. This allows you to easily customize colors, spacing, and other visual properties to match your brand.
 
 ## Token Architecture
 
@@ -329,28 +329,28 @@ Then import it in your app:
 
 ```typescript
 // main.ts
-import '@lettuce/ui/styles.css'
+import '@novavue/ui/styles.css'
 import './your-theme.css'  // Your overrides come AFTER
 ```
 
-### Method 2: Using @lettuce/colors Presets
+### Method 2: Using @novavue/colors Presets
 
 We provide pre-built color themes that you can import:
 
 ```typescript
 // main.ts
-import '@lettuce/ui/styles.css'
-import '@lettuce/colors/blue.css'  // or red, green, orange, violet, etc.
+import '@novavue/ui/styles.css'
+import '@novavue/colors/blue.css'  // or red, green, orange, violet, etc.
 ```
 
 Available color themes:
-- `@lettuce/colors/blue.css` - Professional blue
-- `@lettuce/colors/red.css` - Bold red
-- `@lettuce/colors/rose.css` - Soft rose/pink
-- `@lettuce/colors/orange.css` - Energetic orange
-- `@lettuce/colors/yellow.css` - Bright yellow
-- `@lettuce/colors/green.css` - Fresh green
-- `@lettuce/colors/violet.css` - Creative violet
+- `@novavue/colors/blue.css` - Professional blue
+- `@novavue/colors/red.css` - Bold red
+- `@novavue/colors/rose.css` - Soft rose/pink
+- `@novavue/colors/orange.css` - Energetic orange
+- `@novavue/colors/yellow.css` - Bright yellow
+- `@novavue/colors/green.css` - Fresh green
+- `@novavue/colors/violet.css` - Creative violet
 
 ### Method 3: Inline Styles for Dynamic Theming
 
@@ -487,7 +487,7 @@ You can also use other formats:
 
 ## Dark Mode
 
-Lettuce UI uses the `.dark` class for dark mode. Override dark mode tokens in the `.dark` selector:
+Nova Vue uses the `.dark` class for dark mode. Override dark mode tokens in the `.dark` selector:
 
 ```css
 :root {

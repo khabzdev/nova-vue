@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Splitter, SplitterPanel, SplitterResizeHandle } from '@lettuce/ui/splitter'
+import { Splitter, SplitterPanel, SplitterResizeHandle } from '@novavue/ui/splitter'
 
 const meta = {
   title: 'Components/Splitter',

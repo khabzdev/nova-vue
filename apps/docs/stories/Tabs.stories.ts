@@ -4,7 +4,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from '@lettuce/ui/tabs'
+} from '@novavue/ui/tabs'
 
 const meta = {
   title: 'Components/Tabs',

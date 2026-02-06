@@ -1,1 +1,0 @@
-import{i as e}from"./ConfigProvider-CB94jlZd.js";import{r as i,c as u}from"./vue.esm-bundler-BitZzlT5.js";function c(t){const r=e({nonce:i()});return u(()=>{var o;return(t==null?void 0:t.value)||((o=r.nonce)==null?void 0:o.value)})}export{c as u};

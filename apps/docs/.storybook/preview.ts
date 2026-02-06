@@ -2,12 +2,12 @@ import type { Preview } from '@storybook/vue3'
 import './tailwind.css'
 import './styles.css'
 import './colors.css'
-import lettuceTheme from './theme'
+import NovaTheme from './theme'
 
 const preview: Preview = {
   parameters: {
     docs: {
-      theme: lettuceTheme,
+      theme: NovaTheme,
     },
     controls: {
       matchers: {

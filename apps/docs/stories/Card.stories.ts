@@ -6,10 +6,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@lettuce/ui/card'
-import { Button } from '@lettuce/ui/button'
-import { Input } from '@lettuce/ui/input'
-import { Label } from '@lettuce/ui/label'
+} from '@novavue/ui/card'
+import { Button } from '@novavue/ui/button'
+import { Input } from '@novavue/ui/input'
+import { Label } from '@novavue/ui/label'
 
 const meta = {
   title: 'Components/Card',

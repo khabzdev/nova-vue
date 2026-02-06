@@ -1,21 +1,21 @@
-# @lettuce/colors
+# @novavue/colors
 
-Color themes for Lettuce UI components.
+Color themes for Nova Vue components.
 
 ## Installation
 
 ```bash
-bun add @lettuce/colors
+bun add @novavue/colors
 ```
 
 ## Usage
 
-Import a color theme CSS file **after** the main Lettuce UI styles:
+Import a color theme CSS file **after** the main Nova Vue styles:
 
 ```ts
 // main.ts
-import '@lettuce/ui/styles.css'
-import '@lettuce/colors/blue.css' // or any other color theme
+import '@novavue/ui/styles.css'
+import '@novavue/colors/blue.css' // or any other color theme
 ```
 
 ## Available Themes

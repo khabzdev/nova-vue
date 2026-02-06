@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import { RadioGroup, RadioGroupItem } from '@lettuce/ui/radio-group'
-import { Label } from '@lettuce/ui/label'
+import { RadioGroup, RadioGroupItem } from '@novavue/ui/radio-group'
+import { Label } from '@novavue/ui/label'
 
 const meta = {
   title: 'Components/RadioGroup',

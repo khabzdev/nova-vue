@@ -4,7 +4,7 @@ export default create({
   base: 'light',
 
   // Brand
-  brandTitle: '🥬 Lettuce UI',
+  brandTitle: '🥬 Nova Vue',
   brandUrl: 'https://github.com',
   brandTarget: '_self',
 

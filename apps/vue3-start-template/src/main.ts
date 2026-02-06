@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
-import '@lettuce/ui/styles.css'
+import '@novavue/ui/styles.css'
 import './style.css'
 
 // Import pages

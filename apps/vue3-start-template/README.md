@@ -1,11 +1,11 @@
 # Vue 3 Starter Template
 
-A modern Vue 3 starter template built with Lettuce UI, Tailwind CSS, and Vue Router.
+A modern Vue 3 starter template built with Nova Vue, Tailwind CSS, and Vue Router.
 
 ## Features
 
 - **Vue 3** - Composition API with `<script setup>`
-- **Lettuce UI** - Beautiful, accessible components
+- **Nova Vue** - Beautiful, accessible components
 - **Tailwind CSS v4** - Utility-first styling
 - **Vue Router** - Client-side routing
 - **TypeScript** - Full type safety
@@ -47,12 +47,12 @@ pnpm preview
 
 ### Changing Colors
 
-Import a color theme from `@lettuce/colors`:
+Import a color theme from `@novavue/colors`:
 
 ```typescript
 // main.ts
-import '@lettuce/ui/styles.css'
-import '@lettuce/colors/blue.css'  // Add your preferred color
+import '@novavue/ui/styles.css'
+import '@novavue/colors/blue.css'  // Add your preferred color
 import './style.css'
 ```
 
@@ -84,7 +84,7 @@ const router = createRouter({
 
 ## Learn More
 
-- [Lettuce UI Documentation](https://lettuce-ui.dev)
+- [Nova Vue Documentation](https://Nova-ui.dev)
 - [Vue 3 Documentation](https://vuejs.org)
 - [Tailwind CSS Documentation](https://tailwindcss.com)
 - [Vue Router Documentation](https://router.vuejs.org)

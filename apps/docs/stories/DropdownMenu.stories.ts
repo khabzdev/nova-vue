@@ -15,8 +15,8 @@ import {
   DropdownMenuSub,
   DropdownMenuSubTrigger,
   DropdownMenuSubContent,
-} from '@lettuce/ui/dropdown-menu'
-import { Button } from '@lettuce/ui/button'
+} from '@novavue/ui/dropdown-menu'
+import { Button } from '@novavue/ui/button'
 
 const meta = {
   title: 'Components/DropdownMenu',

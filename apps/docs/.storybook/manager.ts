@@ -1,8 +1,8 @@
 import { addons } from '@storybook/manager-api'
-import lettuceTheme from './theme'
+import NovaTheme from './theme'
 
 addons.setConfig({
-  theme: lettuceTheme,
+  theme: NovaTheme,
   sidebar: {
     showRoots: true,
   },

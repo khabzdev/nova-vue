@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
- * Lettuce UI Design Tokens
+ * Nova Vue Design Tokens
  */
 
 @custom-variant dark (&:is(.dark *));

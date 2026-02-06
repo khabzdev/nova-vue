@@ -5,10 +5,10 @@ import {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from '@lettuce/ui/accordion'
-import { Avatar, AvatarImage, AvatarFallback } from '@lettuce/ui/avatar'
-import { Badge } from '@lettuce/ui/badge'
-import { Button } from '@lettuce/ui/button'
+} from '@novavue/ui/accordion'
+import { Avatar, AvatarImage, AvatarFallback } from '@novavue/ui/avatar'
+import { Badge } from '@novavue/ui/badge'
+import { Button } from '@novavue/ui/button'
 import {
   Card,
   CardHeader,
@@ -16,8 +16,8 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from '@lettuce/ui/card'
-import { Checkbox } from '@lettuce/ui/checkbox'
+} from '@novavue/ui/card'
+import { Checkbox } from '@novavue/ui/checkbox'
 import {
   Dialog,
   DialogTrigger,
@@ -27,13 +27,13 @@ import {
   DialogDescription,
   DialogFooter,
   DialogClose,
-} from '@lettuce/ui/dialog'
-import { Input } from '@lettuce/ui/input'
-import { InputGroup, InputGroupInput, InputGroupAddon } from '@lettuce/ui/input-group'
-import { Label } from '@lettuce/ui/label'
-import { Popover, PopoverTrigger, PopoverContent } from '@lettuce/ui/popover'
-import { ScrollArea } from '@lettuce/ui/scroll-area'
-import { Textarea } from '@lettuce/ui/textarea'
+} from '@novavue/ui/dialog'
+import { Input } from '@novavue/ui/input'
+import { InputGroup, InputGroupInput, InputGroupAddon } from '@novavue/ui/input-group'
+import { Label } from '@novavue/ui/label'
+import { Popover, PopoverTrigger, PopoverContent } from '@novavue/ui/popover'
+import { ScrollArea } from '@novavue/ui/scroll-area'
+import { Textarea } from '@novavue/ui/textarea'
 import {
   Select,
   SelectTrigger,
@@ -43,14 +43,14 @@ import {
   SelectGroup,
   SelectLabel,
   SelectSeparator,
-} from '@lettuce/ui/select'
-import { Separator } from '@lettuce/ui/separator'
-import { Slider } from '@lettuce/ui/slider'
-import { Switch } from '@lettuce/ui/switch'
-import { Toaster, useToast } from '@lettuce/ui/toast'
-import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '@lettuce/ui/tooltip'
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@lettuce/ui/tabs'
-import { Alert, AlertTitle, AlertDescription } from '@lettuce/ui/alert'
+} from '@novavue/ui/select'
+import { Separator } from '@novavue/ui/separator'
+import { Slider } from '@novavue/ui/slider'
+import { Switch } from '@novavue/ui/switch'
+import { Toaster, useToast } from '@novavue/ui/toast'
+import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '@novavue/ui/tooltip'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@novavue/ui/tabs'
+import { Alert, AlertTitle, AlertDescription } from '@novavue/ui/alert'
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -59,7 +59,7 @@ import {
   NavigationMenuContent,
   NavigationMenuLink,
   NavigationMenuViewport,
-} from '@lettuce/ui/navigation-menu'
+} from '@novavue/ui/navigation-menu'
 import { Icon } from '@iconify/vue'
 
 const { toast } = useToast()
@@ -99,7 +99,7 @@ onMounted(() => {
       <!-- Header -->
       <header class="flex items-start justify-between">
         <div class="space-y-2">
-          <h1 class="text-4xl font-bold tracking-tight">Lettuce UI</h1>
+          <h1 class="text-4xl font-bold tracking-tight">Nova Vue</h1>
           <p class="text-muted-foreground">
             A Vue 3 component library built with Reka UI and Motion Vue
           </p>
@@ -429,7 +429,7 @@ onMounted(() => {
               <AccordionItem value="item-2">
                 <AccordionTrigger>Is it styled?</AccordionTrigger>
                 <AccordionContent>
-                  Yes. It comes with default styles that match the Lettuce UI design system.
+                  Yes. It comes with default styles that match the Nova Vue design system.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
@@ -446,9 +446,9 @@ onMounted(() => {
             <h3 class="text-sm font-medium text-muted-foreground mb-3">Multiple</h3>
             <Accordion type="multiple" class="w-full max-w-md">
               <AccordionItem value="faq-1">
-                <AccordionTrigger>What is Lettuce UI?</AccordionTrigger>
+                <AccordionTrigger>What is Nova Vue?</AccordionTrigger>
                 <AccordionContent>
-                  Lettuce UI is a Vue 3 component library built with Reka UI primitives and Motion Vue animations, following COSS UI styling conventions.
+                  Nova Vue is a Vue 3 component library built with Reka UI primitives and Motion Vue animations, following COSS UI styling conventions.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="faq-2">
@@ -1273,7 +1273,7 @@ onMounted(() => {
                         class="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                         href="#"
                       >
-                        <div class="mb-2 mt-4 text-lg font-medium">Lettuce UI</div>
+                        <div class="mb-2 mt-4 text-lg font-medium">Nova Vue</div>
                         <p class="text-sm leading-tight text-muted-foreground">
                           Beautifully designed components built with Reka UI and Tailwind CSS.
                         </p>

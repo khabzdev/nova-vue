@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import { Tree, type TreeItemData } from '@lettuce/ui/tree'
+import { Tree, type TreeItemData } from '@novavue/ui/tree'
 
 const meta = {
   title: 'Components/Tree',

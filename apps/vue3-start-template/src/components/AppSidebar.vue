@@ -2,9 +2,9 @@
 import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { Icon } from '@iconify/vue'
-import { Button } from '@lettuce/ui/button'
-import { Separator } from '@lettuce/ui/separator'
-import { Tooltip, TooltipTrigger, TooltipContent } from '@lettuce/ui/tooltip'
+import { Button } from '@novavue/ui/button'
+import { Separator } from '@novavue/ui/separator'
+import { Tooltip, TooltipTrigger, TooltipContent } from '@novavue/ui/tooltip'
 
 defineProps<{
   collapsed: boolean
@@ -44,7 +44,7 @@ function isActive(path: string) {
         <Icon icon="hugeicons:leaf-01" class="h-5 w-5" />
       </div>
       <span v-if="!collapsed" class="font-semibold text-sidebar-foreground">
-        Lettuce
+        Nova
       </span>
     </div>
 

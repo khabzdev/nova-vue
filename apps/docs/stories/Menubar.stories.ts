@@ -16,7 +16,7 @@ import {
   MenubarSub,
   MenubarSubTrigger,
   MenubarSubContent,
-} from '@lettuce/ui/menubar'
+} from '@novavue/ui/menubar'
 
 const meta = {
   title: 'Components/Menubar',

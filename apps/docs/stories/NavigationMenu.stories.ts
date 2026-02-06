@@ -7,7 +7,7 @@ import {
   NavigationMenuContent,
   NavigationMenuLink,
   NavigationMenuViewport,
-} from '@lettuce/ui/navigation-menu'
+} from '@novavue/ui/navigation-menu'
 
 const meta = {
   title: 'Components/NavigationMenu',

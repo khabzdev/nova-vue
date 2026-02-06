@@ -8,7 +8,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from '@lettuce/ui/select'
+} from '@novavue/ui/select'
 
 const meta = {
   title: 'Components/Select',

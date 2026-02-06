@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Avatar, AvatarImage, AvatarFallback } from '@lettuce/ui/avatar'
+import { Avatar, AvatarImage, AvatarFallback } from '@novavue/ui/avatar'
 
 const meta = {
   title: 'Components/Avatar',

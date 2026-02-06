@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import { Switch } from '@lettuce/ui/switch'
-import { Label } from '@lettuce/ui/label'
+import { Switch } from '@novavue/ui/switch'
+import { Label } from '@novavue/ui/label'
 
 const meta = {
   title: 'Components/Switch',

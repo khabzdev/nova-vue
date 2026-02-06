@@ -1,1 +1,0 @@
-import{i as d}from"./ohash.D__AXeF1-Cq3NGnZa.js";function r(n,i){if(n.length!==i.length)return!1;for(let e=0;e<n.length;e++)if(n[e]!==i[e])return!1;return!0}function c(n,i,e){const f=n.findIndex(t=>d(t,i)),s=n.findIndex(t=>d(t,e));if(f===-1||s===-1)return[];const[u,l]=[f,s].sort((t,o)=>t-o);return n.slice(u,l+1)}export{r as a,c as f};

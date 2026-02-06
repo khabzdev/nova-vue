@@ -1,10 +1,10 @@
 {
-  "name": "lettuce",
+  "name": "novavue",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "playground": "turbo run dev --filter=@lettuce/playground",
+    "playground": "turbo run dev --filter=@novavue/playground",
     "lint": "oxlint --ignore-path .gitignore .",
     "lint:fix": "oxlint --fix --ignore-path .gitignore .",
     "type-check": "turbo run type-check"

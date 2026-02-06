@@ -7,7 +7,7 @@ import {
   ListboxGroup,
   ListboxGroupLabel,
   ListboxFilter,
-} from '@lettuce/ui/listbox'
+} from '@novavue/ui/listbox'
 
 const meta = {
   title: 'Components/Listbox',

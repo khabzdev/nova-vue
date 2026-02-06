@@ -1,17 +1,17 @@
 {
-  "name": "@lettuce/colors",
+  "name": "@novavue/colors",
   "version": "0.1.0",
-  "description": "Color themes for Lettuce UI - blue, green, red, rose, orange, yellow, violet",
+  "description": "Color themes for Nova Vue - blue, green, red, rose, orange, yellow, violet",
   "author": "Your Name <your.email@example.com>",
   "license": "MIT",
-  "homepage": "https://github.com/yourusername/lettuce",
+  "homepage": "https://github.com/yourusername/novavue",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/lettuce.git",
+    "url": "git+https://github.com/yourusername/novavue.git",
     "directory": "packages/colors"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/lettuce/issues"
+    "url": "https://github.com/yourusername/novavue/issues"
   },
   "keywords": [
     "vue",
@@ -20,7 +20,7 @@
     "colors",
     "css",
     "tailwindcss",
-    "lettuce-ui",
+    "novavue",
     "design-tokens"
   ],
   "type": "module",
@@ -41,6 +41,6 @@
     "**/*.css"
   ],
   "peerDependencies": {
-    "@lettuce/ui": ">=0.1.0"
+    "@novavue/ui": ">=0.1.0"
   }
 }

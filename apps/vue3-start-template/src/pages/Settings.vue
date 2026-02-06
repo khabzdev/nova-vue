@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, inject } from 'vue'
 import { Icon } from '@iconify/vue'
-import { Button } from '@lettuce/ui/button'
+import { Button } from '@novavue/ui/button'
 import {
   Card,
   CardHeader,
@@ -9,21 +9,21 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from '@lettuce/ui/card'
-import { Input } from '@lettuce/ui/input'
-import { Label } from '@lettuce/ui/label'
-import { Textarea } from '@lettuce/ui/textarea'
-import { Switch } from '@lettuce/ui/switch'
-import { Separator } from '@lettuce/ui/separator'
+} from '@novavue/ui/card'
+import { Input } from '@novavue/ui/input'
+import { Label } from '@novavue/ui/label'
+import { Textarea } from '@novavue/ui/textarea'
+import { Switch } from '@novavue/ui/switch'
+import { Separator } from '@novavue/ui/separator'
 import {
   Select,
   SelectTrigger,
   SelectValue,
   SelectContent,
   SelectItem,
-} from '@lettuce/ui/select'
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@lettuce/ui/tabs'
-import { useToast } from '@lettuce/ui/toast'
+} from '@novavue/ui/select'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@novavue/ui/tabs'
+import { useToast } from '@novavue/ui/toast'
 
 const { toast } = useToast()
 
@@ -257,7 +257,7 @@ function saveNotifications() {
                 />
               </div>
               <p class="text-sm text-muted-foreground">
-                Choose your preferred accent color. Import a color theme from @lettuce/colors.
+                Choose your preferred accent color. Import a color theme from @novavue/colors.
               </p>
             </div>
           </CardContent>

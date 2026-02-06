@@ -3,9 +3,9 @@ import {
   HoverCard,
   HoverCardTrigger,
   HoverCardContent,
-} from '@lettuce/ui/hover-card'
-import { Avatar, AvatarImage, AvatarFallback } from '@lettuce/ui/avatar'
-import { Button } from '@lettuce/ui/button'
+} from '@novavue/ui/hover-card'
+import { Avatar, AvatarImage, AvatarFallback } from '@novavue/ui/avatar'
+import { Button } from '@novavue/ui/button'
 
 const meta = {
   title: 'Components/HoverCard',

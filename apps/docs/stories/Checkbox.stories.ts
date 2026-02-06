@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import { Checkbox } from '@lettuce/ui/checkbox'
-import { Label } from '@lettuce/ui/label'
+import { Checkbox } from '@novavue/ui/checkbox'
+import { Label } from '@novavue/ui/label'
 
 const meta = {
   title: 'Components/Checkbox',

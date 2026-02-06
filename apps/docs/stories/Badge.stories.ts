@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Badge } from '@lettuce/ui/badge'
+import { Badge } from '@novavue/ui/badge'
 
 const meta = {
   title: 'Components/Badge',

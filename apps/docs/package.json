@@ -1,5 +1,5 @@
 {
-  "name": "@lettuce/docs",
+  "name": "@Nova/docs",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@iconify/vue": "5.0.0",
-    "@lettuce/colors": "workspace:*",
-    "@lettuce/ui": "workspace:*"
+    "@novavue/colors": "workspace:*",
+    "@novavue/ui": "workspace:*"
   }
 }

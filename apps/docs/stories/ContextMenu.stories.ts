@@ -15,7 +15,7 @@ import {
   ContextMenuSub,
   ContextMenuSubTrigger,
   ContextMenuSubContent,
-} from '@lettuce/ui/context-menu'
+} from '@novavue/ui/context-menu'
 
 const meta = {
   title: 'Components/ContextMenu',

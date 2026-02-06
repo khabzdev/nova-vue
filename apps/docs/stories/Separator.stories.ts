@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Separator } from '@lettuce/ui/separator'
+import { Separator } from '@novavue/ui/separator'
 
 const meta = {
   title: 'Components/Separator',
@@ -29,7 +29,7 @@ export const Default: Story = {
     template: `
       <div class="w-full max-w-sm">
         <div class="space-y-1">
-          <h4 class="text-sm font-medium leading-none">Lettuce UI</h4>
+          <h4 class="text-sm font-medium leading-none">Nova Vue</h4>
           <p class="text-sm text-muted-foreground">
             A component library for Vue.
           </p>

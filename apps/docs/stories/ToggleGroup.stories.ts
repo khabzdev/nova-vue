@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import { ToggleGroup, ToggleGroupItem } from '@lettuce/ui/toggle-group'
+import { ToggleGroup, ToggleGroupItem } from '@novavue/ui/toggle-group'
 import { Icon } from '@iconify/vue'
 
 const meta = {

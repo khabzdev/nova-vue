@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import { Slider } from '@lettuce/ui/slider'
+import { Slider } from '@novavue/ui/slider'
 
 const meta = {
   title: 'Components/Slider',

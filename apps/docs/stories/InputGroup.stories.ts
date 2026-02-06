@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { InputGroup, InputGroupInput, InputGroupAddon } from '@lettuce/ui/input-group'
+import { InputGroup, InputGroupInput, InputGroupAddon } from '@novavue/ui/input-group'
 
 const meta = {
   title: 'Components/InputGroup',

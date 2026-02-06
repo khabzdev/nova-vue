@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Popover, PopoverTrigger, PopoverContent } from '@lettuce/ui/popover'
-import { Button } from '@lettuce/ui/button'
-import { Input } from '@lettuce/ui/input'
-import { Label } from '@lettuce/ui/label'
+import { Popover, PopoverTrigger, PopoverContent } from '@novavue/ui/popover'
+import { Button } from '@novavue/ui/button'
+import { Input } from '@novavue/ui/input'
+import { Label } from '@novavue/ui/label'
 
 const meta = {
   title: 'Components/Popover',
