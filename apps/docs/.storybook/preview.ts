@@ -1,6 +1,6 @@
 import type { Preview, Renderer } from '@storybook/vue3'
 import { withThemeByClassName } from '@storybook/addon-themes'
-import '@lettuce/ui/styles.css'
+import './tailwind.css'
 import './styles.css'
 import lettuceTheme from './theme'
 

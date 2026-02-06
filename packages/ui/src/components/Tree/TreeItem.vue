@@ -4,78 +4,58 @@ import {
   TreeItem as TreeItemPrimitive,
   type TreeItemProps,
   type TreeItemEmits,
-  useForwardPropsEmits,
 } from 'reka-ui'
-import { HugeiconsIcon } from '@hugeicons/vue'
-import { ArrowRight01Icon } from '@hugeicons/core-free-icons'
 import { cn } from '@/utils/cn'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const props = defineProps<TreeItemProps<any> & { class?: string }>()
+const props = defineProps<TreeItemProps<any> & { class?: string; hasChildren?: boolean }>()
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const emit = defineEmits<TreeItemEmits<any>>()
-const forwarded = useForwardPropsEmits(props, emit)
+defineEmits<TreeItemEmits<any>>()
 
 const classes = computed(() =>
   cn(
     [
       // Layout
-      'flex flex-col gap-0.5',
+      'flex items-center gap-1.5 py-1 px-2',
       // Typography
       'text-sm',
-      // Outline
-      'outline-none',
+      // Shape
+      'rounded-lg',
+      // States
+      'outline-none transition-colors',
+      'hover:bg-accent/64',
+      'focus:bg-accent',
+      'data-[selected]:bg-accent data-[selected]:text-accent-foreground',
+      // Disabled
+      'data-[disabled]:pointer-events-none data-[disabled]:opacity-64',
     ],
     props.class
   )
 )
-
-const itemClasses = computed(() =>
-  cn([
-    // Layout
-    'flex items-center gap-1.5 py-1 px-2',
-    // Shape
-    'rounded-lg',
-    // States
-    'outline-none transition-colors',
-    'hover:bg-accent/64',
-    'focus:bg-accent',
-    'data-[selected]:bg-accent data-[selected]:text-accent-foreground',
-    // Disabled
-    'data-[disabled]:pointer-events-none data-[disabled]:opacity-64',
-  ])
-)
-
-const iconClasses = 'size-4 shrink-0 text-muted-foreground transition-transform duration-200'
 </script>
 
 <template>
   <TreeItemPrimitive
-    v-bind="forwarded"
-    v-slot="{ isExpanded, isSelected, handleToggle, handleSelect }"
+    :value="props.value"
+    :level="props.level"
+    v-slot="{ isExpanded, isSelected, handleToggle }"
     :class="classes"
-    :style="{ paddingLeft: `${(level ?? 0) * 12}px` }"
+    :style="{ paddingLeft: `${(props.level ?? 0) * 12}px` }"
   >
-    <div :class="itemClasses" @click="handleSelect">
-      <button
-        v-if="$slots.default"
-        type="button"
-        class="flex items-center justify-center outline-none"
-        @click.stop="handleToggle"
-      >
-        <HugeiconsIcon
-          :icon="ArrowRight01Icon"
-          :size="16"
-          :class="[iconClasses, isExpanded && 'rotate-90']"
-        />
-      </button>
-      <span v-else class="size-4" />
-      <slot name="content" :is-expanded="isExpanded" :is-selected="isSelected">
-        {{ value }}
-      </slot>
-    </div>
-    <div v-if="isExpanded && $slots.default" class="flex flex-col gap-0.5">
-      <slot :is-expanded="isExpanded" :is-selected="isSelected" />
-    </div>
+    <button
+      v-if="props.hasChildren"
+      type="button"
+      class="flex size-4 items-center justify-center outline-none text-muted-foreground transition-transform duration-200"
+      :class="{ 'rotate-90': isExpanded }"
+      @click.stop="handleToggle"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m9 18 6-6-6-6"/>
+      </svg>
+    </button>
+    <span v-else class="size-4" />
+    <slot name="content" :is-expanded="isExpanded" :is-selected="isSelected">
+      {{ props.value }}
+    </slot>
   </TreeItemPrimitive>
 </template>

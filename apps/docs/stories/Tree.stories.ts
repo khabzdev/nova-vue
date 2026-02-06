@@ -58,12 +58,12 @@ export const Default: Story = {
     items: treeData,
     getKey: (item: TreeNode) => item.id,
   },
-  render: (args) => ({
+  render: () => ({
     components: { Tree, TreeItem },
     setup() {
       const selected = ref<TreeNode | undefined>()
       const expanded = ref<string[]>(['1'])
-      return { args, selected, expanded, treeData }
+      return { selected, expanded, treeData }
     },
     template: `
       <Tree
@@ -71,6 +71,7 @@ export const Default: Story = {
         v-model:expanded="expanded"
         :items="treeData"
         :get-key="(item) => item.id"
+        :get-children="(item) => item.children"
         class="w-[300px] rounded-lg border border-input p-2"
       >
         <template #default="{ flattenItems }">
@@ -78,27 +79,9 @@ export const Default: Story = {
             v-for="item in flattenItems"
             :key="item._id"
             v-bind="item.bind"
+            :level="item.level"
+            :has-children="item.hasChildren"
           >
-            <template v-if="item.hasChildren">
-              <TreeItem
-                v-for="child in item.value.children"
-                :key="child.id"
-                :value="child"
-                :level="item.level + 1"
-              >
-                <template #content>{{ child.name }}</template>
-                <template v-if="child.children">
-                  <TreeItem
-                    v-for="grandchild in child.children"
-                    :key="grandchild.id"
-                    :value="grandchild"
-                    :level="item.level + 2"
-                  >
-                    <template #content>{{ grandchild.name }}</template>
-                  </TreeItem>
-                </template>
-              </TreeItem>
-            </template>
             <template #content>{{ item.value.name }}</template>
           </TreeItem>
         </template>
@@ -112,12 +95,12 @@ export const MultipleSelection: Story = {
     items: treeData,
     getKey: (item: TreeNode) => item.id,
   },
-  render: (args) => ({
+  render: () => ({
     components: { Tree, TreeItem },
     setup() {
       const selected = ref<TreeNode[]>([])
       const expanded = ref<string[]>(['1', '1.1'])
-      return { args, selected, expanded, treeData }
+      return { selected, expanded, treeData }
     },
     template: `
       <Tree
@@ -125,6 +108,7 @@ export const MultipleSelection: Story = {
         v-model:expanded="expanded"
         :items="treeData"
         :get-key="(item) => item.id"
+        :get-children="(item) => item.children"
         multiple
         class="w-[300px] rounded-lg border border-input p-2"
       >
@@ -133,27 +117,9 @@ export const MultipleSelection: Story = {
             v-for="item in flattenItems"
             :key="item._id"
             v-bind="item.bind"
+            :level="item.level"
+            :has-children="item.hasChildren"
           >
-            <template v-if="item.hasChildren">
-              <TreeItem
-                v-for="child in item.value.children"
-                :key="child.id"
-                :value="child"
-                :level="item.level + 1"
-              >
-                <template #content>{{ child.name }}</template>
-                <template v-if="child.children">
-                  <TreeItem
-                    v-for="grandchild in child.children"
-                    :key="grandchild.id"
-                    :value="grandchild"
-                    :level="item.level + 2"
-                  >
-                    <template #content>{{ grandchild.name }}</template>
-                  </TreeItem>
-                </template>
-              </TreeItem>
-            </template>
             <template #content>{{ item.value.name }}</template>
           </TreeItem>
         </template>

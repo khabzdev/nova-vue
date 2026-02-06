@@ -21,7 +21,7 @@ const classes = computed(() =>
 </script>
 
 <template>
-  <TreeRoot v-bind="forwarded" :class="classes">
-    <slot />
+  <TreeRoot v-bind="forwarded" :class="classes" v-slot="slotProps">
+    <slot v-bind="slotProps" />
   </TreeRoot>
 </template>

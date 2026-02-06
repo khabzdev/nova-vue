@@ -315,7 +315,9 @@
     "@storybook/theming" "8.6.14"
     "@storybook/vue3" "^8.4.0"
     "@storybook/vue3-vite" "^8.4.0"
+    "@tailwindcss/vite" "4.1.18"
     storybook "^8.4.0"
+    tailwindcss "4.1.18"
     vue "^3.5.0"
   dependencies:
     "@hugeicons/core-free-icons" "3.1.1"
@@ -1015,6 +1017,15 @@
     "@tailwindcss/oxide" "4.1.18"
     postcss "^8.4.41"
     tailwindcss "4.1.18"
+
+"@tailwindcss/vite@4.1.18":
+  version "4.1.18"
+  resolved "https://registry.npmjs.org/@tailwindcss/vite/-/vite-4.1.18.tgz"
+  integrity sha512-jVA+/UpKL1vRLg6Hkao5jldawNmRo7mQYrZtNHMIVpLfLhDml5nMRUo/8MwoX2vNXvnaXNNMedrMfMugAVX1nA==
+  dependencies:
+    tailwindcss "4.1.18"
+    "@tailwindcss/node" "4.1.18"
+    "@tailwindcss/oxide" "4.1.18"
 
 "@tanstack/virtual-core@3.13.18":
   version "3.13.18"
@@ -2804,7 +2815,7 @@ uuid@^9.0.0:
   resolved "https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz"
   integrity sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==
 
-vite@*, "vite@^4.0.0 || ^5.0.0 || ^6.0.0", "vite@^5.0.0 || ^6.0.0", vite@^6.0.0:
+vite@*, "vite@^4.0.0 || ^5.0.0 || ^6.0.0", "vite@^5.0.0 || ^6.0.0", "vite@^5.2.0 || ^6 || ^7", vite@^6.0.0:
   version "6.4.1"
   resolved "https://registry.npmjs.org/vite/-/vite-6.4.1.tgz"
   integrity sha512-+Oxm7q9hDoLMyJOYfUYBuHQo+dkAloi33apOPP56pzj+vsdJDzr+j1NISE5pyaAuKL4A3UD34qd0lx5+kfKp2g==
