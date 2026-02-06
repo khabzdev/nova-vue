@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { ref } from 'vue'
 import { Toaster, useToast } from '@lettuce/ui/toast'
 import { Button } from '@lettuce/ui/button'
 

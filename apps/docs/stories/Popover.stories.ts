@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from '@lettuce/ui/popover'
+import { Popover, PopoverTrigger, PopoverContent } from '@lettuce/ui/popover'
 import { Button } from '@lettuce/ui/button'
 import { Input } from '@lettuce/ui/input'
 import { Label } from '@lettuce/ui/label'
