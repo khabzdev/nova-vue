@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@iconify/vue": "5.0.0",
-    "@lettuce/themes": "workspace:*",
+    "@lettuce/colors": "workspace:*",
     "@lettuce/ui": "workspace:*",
     "vue": "^3.5.0"
   },

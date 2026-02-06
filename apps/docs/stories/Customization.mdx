@@ -1,0 +1,582 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Customization/Design Tokens" />
+
+# Design Tokens
+
+Lettuce UI uses CSS custom properties (design tokens) for theming. This allows you to easily customize colors, spacing, and other visual properties to match your brand.
+
+## Token Architecture
+
+The theming system uses a two-layer approach:
+
+1. **Semantic tokens** (`--primary`, `--background`, etc.) - Define the purpose of a color
+2. **Tailwind mappings** (`--color-primary`, `--color-background`, etc.) - Map semantic tokens to Tailwind utilities
+
+This separation allows you to override just the semantic tokens while keeping all component styles working correctly.
+
+---
+
+## Core Tokens Reference
+
+### Background & Foreground
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Description</th>
+      <th>Light Default</th>
+      <th>Dark Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--background</code></td>
+      <td>Page/app background</td>
+      <td>White</td>
+      <td>Neutral 950</td>
+    </tr>
+    <tr>
+      <td><code>--foreground</code></td>
+      <td>Primary text color</td>
+      <td>Neutral 800</td>
+      <td>Neutral 100</td>
+    </tr>
+  </tbody>
+</table>
+
+### Primary Colors
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Description</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--primary</code></td>
+      <td>Main brand color</td>
+      <td>Buttons, links, active states</td>
+    </tr>
+    <tr>
+      <td><code>--primary-foreground</code></td>
+      <td>Text on primary backgrounds</td>
+      <td>Button text</td>
+    </tr>
+  </tbody>
+</table>
+
+### Secondary & Accent
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Description</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--secondary</code></td>
+      <td>Secondary actions</td>
+      <td>Secondary buttons</td>
+    </tr>
+    <tr>
+      <td><code>--secondary-foreground</code></td>
+      <td>Text on secondary</td>
+      <td>Secondary button text</td>
+    </tr>
+    <tr>
+      <td><code>--accent</code></td>
+      <td>Highlighted/hover states</td>
+      <td>Menu items, list selections</td>
+    </tr>
+    <tr>
+      <td><code>--accent-foreground</code></td>
+      <td>Text on accent backgrounds</td>
+      <td>Menu text</td>
+    </tr>
+  </tbody>
+</table>
+
+### Muted Colors
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Description</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--muted</code></td>
+      <td>Subdued backgrounds</td>
+      <td>Disabled states, subtle areas</td>
+    </tr>
+    <tr>
+      <td><code>--muted-foreground</code></td>
+      <td>Subdued text</td>
+      <td>Placeholder text, captions</td>
+    </tr>
+  </tbody>
+</table>
+
+### Status Colors
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--destructive</code></td>
+      <td>Error/danger actions</td>
+    </tr>
+    <tr>
+      <td><code>--destructive-foreground</code></td>
+      <td>Text for destructive elements</td>
+    </tr>
+    <tr>
+      <td><code>--info</code></td>
+      <td>Informational states</td>
+    </tr>
+    <tr>
+      <td><code>--info-foreground</code></td>
+      <td>Info text</td>
+    </tr>
+    <tr>
+      <td><code>--success</code></td>
+      <td>Success states</td>
+    </tr>
+    <tr>
+      <td><code>--success-foreground</code></td>
+      <td>Success text</td>
+    </tr>
+    <tr>
+      <td><code>--warning</code></td>
+      <td>Warning states</td>
+    </tr>
+    <tr>
+      <td><code>--warning-foreground</code></td>
+      <td>Warning text</td>
+    </tr>
+  </tbody>
+</table>
+
+### UI Elements
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Description</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--border</code></td>
+      <td>Default border color</td>
+      <td>Inputs, cards, dividers</td>
+    </tr>
+    <tr>
+      <td><code>--input</code></td>
+      <td>Input border color</td>
+      <td>Form inputs</td>
+    </tr>
+    <tr>
+      <td><code>--ring</code></td>
+      <td>Focus ring color</td>
+      <td>Focus indicators</td>
+    </tr>
+    <tr>
+      <td><code>--radius</code></td>
+      <td>Base border radius</td>
+      <td>All rounded corners</td>
+    </tr>
+  </tbody>
+</table>
+
+### Card & Popover
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--card</code></td>
+      <td>Card background</td>
+    </tr>
+    <tr>
+      <td><code>--card-foreground</code></td>
+      <td>Card text</td>
+    </tr>
+    <tr>
+      <td><code>--popover</code></td>
+      <td>Popover/dropdown background</td>
+    </tr>
+    <tr>
+      <td><code>--popover-foreground</code></td>
+      <td>Popover text</td>
+    </tr>
+  </tbody>
+</table>
+
+### Sidebar
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--sidebar</code></td>
+      <td>Sidebar background</td>
+    </tr>
+    <tr>
+      <td><code>--sidebar-foreground</code></td>
+      <td>Sidebar text</td>
+    </tr>
+    <tr>
+      <td><code>--sidebar-primary</code></td>
+      <td>Sidebar active item</td>
+    </tr>
+    <tr>
+      <td><code>--sidebar-primary-foreground</code></td>
+      <td>Active item text</td>
+    </tr>
+    <tr>
+      <td><code>--sidebar-accent</code></td>
+      <td>Sidebar hover state</td>
+    </tr>
+    <tr>
+      <td><code>--sidebar-accent-foreground</code></td>
+      <td>Hover text</td>
+    </tr>
+    <tr>
+      <td><code>--sidebar-border</code></td>
+      <td>Sidebar borders</td>
+    </tr>
+    <tr>
+      <td><code>--sidebar-ring</code></td>
+      <td>Sidebar focus rings</td>
+    </tr>
+  </tbody>
+</table>
+
+### Charts
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--chart-1</code> through <code>--chart-5</code></td>
+      <td>Chart color palette</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Overriding Tokens
+
+### Method 1: CSS Override (Recommended)
+
+Create a CSS file that overrides the tokens after importing the base styles:
+
+```css
+/* your-theme.css */
+:root {
+  /* Change the primary color to blue */
+  --primary: oklch(0.546 0.245 262.881);
+  --primary-foreground: white;
+  --ring: oklch(0.707 0.165 254.624);
+  
+  /* Adjust border radius */
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Dark mode overrides */
+  --primary: oklch(0.623 0.214 259.815);
+  --primary-foreground: white;
+}
+```
+
+Then import it in your app:
+
+```typescript
+// main.ts
+import '@lettuce/ui/styles.css'
+import './your-theme.css'  // Your overrides come AFTER
+```
+
+### Method 2: Using @lettuce/colors Presets
+
+We provide pre-built color themes that you can import:
+
+```typescript
+// main.ts
+import '@lettuce/ui/styles.css'
+import '@lettuce/colors/blue.css'  // or red, green, orange, violet, etc.
+```
+
+Available color themes:
+- `@lettuce/colors/blue.css` - Professional blue
+- `@lettuce/colors/red.css` - Bold red
+- `@lettuce/colors/rose.css` - Soft rose/pink
+- `@lettuce/colors/orange.css` - Energetic orange
+- `@lettuce/colors/yellow.css` - Bright yellow
+- `@lettuce/colors/green.css` - Fresh green
+- `@lettuce/colors/violet.css` - Creative violet
+
+### Method 3: Inline Styles for Dynamic Theming
+
+For runtime theme switching, apply tokens via inline styles or JavaScript:
+
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const theme = ref({
+  '--primary': 'oklch(0.546 0.245 262.881)',
+  '--primary-foreground': 'white',
+})
+</script>
+
+<template>
+  <div :style="theme">
+    <Button>Themed Button</Button>
+  </div>
+</template>
+```
+
+### Method 4: Scoped Theming with Data Attributes
+
+Apply themes to specific sections using data attributes:
+
+```css
+/* Multi-brand theming */
+[data-brand="company-a"] {
+  --primary: oklch(0.546 0.245 262.881);
+  --primary-foreground: white;
+}
+
+[data-brand="company-b"] {
+  --primary: oklch(0.627 0.194 149.214);
+  --primary-foreground: white;
+}
+```
+
+```vue
+<template>
+  <div data-brand="company-a">
+    <Button>Company A Style</Button>
+  </div>
+  
+  <div data-brand="company-b">
+    <Button>Company B Style</Button>
+  </div>
+</template>
+```
+
+---
+
+## Creating a Custom Theme
+
+Here's a complete example of creating a custom brand theme:
+
+```css
+/* brand-theme.css */
+
+/*
+ * Custom Brand Theme
+ * Primary: Deep Purple
+ * Accent: Teal
+ */
+
+:root {
+  /* Primary - Deep Purple */
+  --primary: oklch(0.491 0.27 292.581);
+  --primary-foreground: white;
+  
+  /* Accent - Teal */
+  --accent: oklch(0.6 0.15 180 / 10%);
+  --accent-foreground: oklch(0.4 0.12 180);
+  
+  /* Ring matches primary */
+  --ring: oklch(0.6 0.2 292);
+  
+  /* Custom radius */
+  --radius: 0.75rem;
+  
+  /* Status colors can be customized too */
+  --success: oklch(0.7 0.17 150);
+  --success-foreground: oklch(0.4 0.12 150);
+}
+
+.dark {
+  /* Lighter purple for dark mode */
+  --primary: oklch(0.6 0.25 292);
+  --primary-foreground: white;
+  
+  /* Adjusted accent for dark */
+  --accent: oklch(0.5 0.12 180 / 15%);
+  --accent-foreground: oklch(0.8 0.1 180);
+  
+  --ring: oklch(0.7 0.18 292);
+}
+```
+
+---
+
+## Color Format Recommendations
+
+We recommend using **OKLCH** colors for the best results:
+
+```css
+/* OKLCH format: oklch(lightness chroma hue) */
+--primary: oklch(0.546 0.245 262.881);
+
+/* With alpha: oklch(lightness chroma hue / alpha) */
+--accent: oklch(0.546 0.245 262.881 / 10%);
+```
+
+**Why OKLCH?**
+- Perceptually uniform - equal steps look equally different
+- Predictable color mixing
+- Wide gamut support for modern displays
+- Native Tailwind CSS v4 color format
+
+You can also use other formats:
+
+```css
+/* Hex */
+--primary: #3b82f6;
+
+/* RGB */
+--primary: rgb(59, 130, 246);
+
+/* HSL */
+--primary: hsl(217, 91%, 60%);
+```
+
+---
+
+## Dark Mode
+
+Lettuce UI uses the `.dark` class for dark mode. Override dark mode tokens in the `.dark` selector:
+
+```css
+:root {
+  --primary: oklch(0.55 0.25 262);
+}
+
+.dark {
+  --primary: oklch(0.65 0.22 262);
+}
+```
+
+To toggle dark mode, add/remove the `dark` class on your root element:
+
+```typescript
+// Toggle dark mode
+document.documentElement.classList.toggle('dark')
+
+// Or use a reactive approach in Vue
+const isDark = ref(false)
+watchEffect(() => {
+  document.documentElement.classList.toggle('dark', isDark.value)
+})
+```
+
+---
+
+## Component-Specific Styling
+
+While tokens handle most theming needs, you can also override specific components using Tailwind:
+
+```vue
+<template>
+  <!-- Override specific button colors -->
+  <Button class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
+    Gradient Button
+  </Button>
+  
+  <!-- Custom card styling -->
+  <Card class="border-2 border-primary/20 shadow-primary/10">
+    <CardContent>Custom styled card</CardContent>
+  </Card>
+</template>
+```
+
+---
+
+## TypeScript Support
+
+When creating theme switching functionality, you can type your theme tokens:
+
+```typescript
+interface ThemeTokens {
+  '--primary': string
+  '--primary-foreground': string
+  '--secondary': string
+  '--secondary-foreground': string
+  '--accent': string
+  '--accent-foreground': string
+  '--background': string
+  '--foreground': string
+  '--muted': string
+  '--muted-foreground': string
+  '--border': string
+  '--input': string
+  '--ring': string
+  '--radius': string
+}
+
+const blueTheme: Partial<ThemeTokens> = {
+  '--primary': 'oklch(0.546 0.245 262.881)',
+  '--primary-foreground': 'white',
+  '--ring': 'oklch(0.707 0.165 254.624)',
+}
+
+function applyTheme(tokens: Partial<ThemeTokens>) {
+  const root = document.documentElement
+  Object.entries(tokens).forEach(([key, value]) => {
+    root.style.setProperty(key, value)
+  })
+}
+```
+
+---
+
+## Best Practices
+
+1. **Always provide dark mode variants** - Users expect dark mode support
+2. **Maintain sufficient contrast** - Ensure text is readable on all backgrounds
+3. **Test with real components** - Verify your theme works across all UI states
+4. **Use semantic tokens** - Override `--primary`, not `--color-blue-500`
+5. **Keep foreground colors appropriate** - Light text on dark backgrounds and vice versa
+6. **Use OKLCH for predictable results** - Especially for programmatic color generation

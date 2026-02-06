@@ -1,21 +1,21 @@
-# @lettuce/themes
+# @lettuce/colors
 
 Color themes for Lettuce UI components.
 
 ## Installation
 
 ```bash
-bun add @lettuce/themes
+bun add @lettuce/colors
 ```
 
 ## Usage
 
-Import a theme CSS file **after** the main Lettuce UI styles:
+Import a color theme CSS file **after** the main Lettuce UI styles:
 
 ```ts
 // main.ts
 import '@lettuce/ui/styles.css'
-import '@lettuce/themes/blue.css' // or any other theme
+import '@lettuce/colors/blue.css' // or any other color theme
 ```
 
 ## Available Themes
