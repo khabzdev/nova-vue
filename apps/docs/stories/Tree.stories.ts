@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import { Tree, TreeItem } from '@lettuce/ui/tree'
+import { Tree, type TreeItemData } from '@lettuce/ui/tree'
 
 const meta = {
   title: 'Components/Tree',
@@ -11,119 +11,141 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-interface TreeNode {
-  id: string
-  name: string
-  children?: TreeNode[]
-}
-
-const treeData: TreeNode[] = [
+const fileTreeItems: TreeItemData[] = [
   {
-    id: '1',
-    name: 'Documents',
+    title: 'composables',
+    icon: 'lucide:folder',
+    children: [
+      { title: 'useAuth.ts', icon: 'vscode-icons:file-type-typescript' },
+      { title: 'useUser.ts', icon: 'vscode-icons:file-type-typescript' },
+    ],
+  },
+  {
+    title: 'components',
+    icon: 'lucide:folder',
     children: [
       {
-        id: '1.1',
-        name: 'Work',
+        title: 'Home',
+        icon: 'lucide:folder',
         children: [
-          { id: '1.1.1', name: 'Report.pdf' },
-          { id: '1.1.2', name: 'Presentation.pptx' },
-        ],
-      },
-      {
-        id: '1.2',
-        name: 'Personal',
-        children: [
-          { id: '1.2.1', name: 'Resume.docx' },
+          { title: 'Card.vue', icon: 'vscode-icons:file-type-vue' },
+          { title: 'Button.vue', icon: 'vscode-icons:file-type-vue' },
         ],
       },
     ],
   },
-  {
-    id: '2',
-    name: 'Images',
-    children: [
-      { id: '2.1', name: 'vacation.jpg' },
-      { id: '2.2', name: 'profile.png' },
-    ],
-  },
-  {
-    id: '3',
-    name: 'readme.md',
-  },
+  { title: 'app.vue', icon: 'vscode-icons:file-type-vue' },
+  { title: 'nuxt.config.ts', icon: 'vscode-icons:file-type-nuxt' },
 ]
 
 export const Default: Story = {
-  args: {
-    items: treeData,
-    getKey: (item: TreeNode) => item.id,
-  },
   render: () => ({
-    components: { Tree, TreeItem },
+    components: { Tree },
     setup() {
-      const selected = ref<TreeNode | undefined>()
-      const expanded = ref<string[]>(['1'])
-      return { selected, expanded, treeData }
+      const items = fileTreeItems
+      return { items }
     },
     template: `
       <Tree
-        v-model="selected"
-        v-model:expanded="expanded"
-        :items="treeData"
-        :get-key="(item) => item.id"
-        :get-children="(item) => item.children"
+        :items="items"
+        :default-expanded="['composables', 'components', 'Home']"
         class="w-[300px] rounded-lg border border-input p-2"
-      >
-        <template #default="{ flattenItems }">
-          <TreeItem
-            v-for="item in flattenItems"
-            :key="item._id"
-            v-bind="item.bind"
-            :level="item.level"
-            :has-children="item.hasChildren"
-          >
-            <template #content>{{ item.value.name }}</template>
-          </TreeItem>
-        </template>
-      </Tree>
+      />
+    `,
+  }),
+}
+
+export const WithSelection: Story = {
+  render: () => ({
+    components: { Tree },
+    setup() {
+      const items = fileTreeItems
+      const selected = ref<TreeItemData | undefined>()
+      return { items, selected }
+    },
+    template: `
+      <div class="space-y-4">
+        <Tree
+          v-model="selected"
+          :items="items"
+          :default-expanded="['composables', 'components']"
+          class="w-[300px] rounded-lg border border-input p-2"
+        />
+        <p class="text-sm text-muted-foreground">
+          Selected: {{ selected?.title ?? 'None' }}
+        </p>
+      </div>
     `,
   }),
 }
 
 export const MultipleSelection: Story = {
-  args: {
-    items: treeData,
-    getKey: (item: TreeNode) => item.id,
-  },
   render: () => ({
-    components: { Tree, TreeItem },
+    components: { Tree },
     setup() {
-      const selected = ref<TreeNode[]>([])
-      const expanded = ref<string[]>(['1', '1.1'])
-      return { selected, expanded, treeData }
+      const items = fileTreeItems
+      const selected = ref<TreeItemData[]>([])
+      return { items, selected }
+    },
+    template: `
+      <div class="space-y-4">
+        <Tree
+          v-model="selected"
+          :items="items"
+          :default-expanded="['composables', 'components', 'Home']"
+          multiple
+          class="w-[300px] rounded-lg border border-input p-2"
+        />
+        <p class="text-sm text-muted-foreground">
+          Selected: {{ selected.map(s => s.title).join(', ') || 'None' }}
+        </p>
+      </div>
+    `,
+  }),
+}
+
+const simpleItems: TreeItemData[] = [
+  {
+    title: 'Documents',
+    children: [
+      {
+        title: 'Work',
+        children: [
+          { title: 'Report.pdf' },
+          { title: 'Presentation.pptx' },
+        ],
+      },
+      {
+        title: 'Personal',
+        children: [
+          { title: 'Resume.docx' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Images',
+    children: [
+      { title: 'vacation.jpg' },
+      { title: 'profile.png' },
+    ],
+  },
+  { title: 'readme.md' },
+]
+
+export const WithoutIcons: Story = {
+  render: () => ({
+    components: { Tree },
+    setup() {
+      const items = simpleItems
+      return { items }
     },
     template: `
       <Tree
-        v-model="selected"
-        v-model:expanded="expanded"
-        :items="treeData"
-        :get-key="(item) => item.id"
-        :get-children="(item) => item.children"
-        multiple
+        :items="items"
+        :default-expanded="['Documents', 'Work']"
         class="w-[300px] rounded-lg border border-input p-2"
-      >
-        <template #default="{ flattenItems }">
-          <TreeItem
-            v-for="item in flattenItems"
-            :key="item._id"
-            v-bind="item.bind"
-            :level="item.level"
-            :has-children="item.hasChildren"
-          >
-            <template #content>{{ item.value.name }}</template>
-          </TreeItem>
-        </template>
-      </Tree>
+      />
     `,
   }),
 }
