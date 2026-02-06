@@ -16,6 +16,11 @@
       "import": "./dist/accordion.js",
       "require": "./dist/accordion.cjs"
     },
+    "./aspect-ratio": {
+      "types": "./dist/aspect-ratio.d.ts",
+      "import": "./dist/aspect-ratio.js",
+      "require": "./dist/aspect-ratio.cjs"
+    },
     "./avatar": {
       "types": "./dist/avatar.d.ts",
       "import": "./dist/avatar.js",
@@ -40,6 +45,26 @@
       "types": "./dist/dialog.d.ts",
       "import": "./dist/dialog.js",
       "require": "./dist/dialog.cjs"
+    },
+    "./dropdown-menu": {
+      "types": "./dist/dropdown-menu.d.ts",
+      "import": "./dist/dropdown-menu.js",
+      "require": "./dist/dropdown-menu.cjs"
+    },
+    "./hover-card": {
+      "types": "./dist/hover-card.d.ts",
+      "import": "./dist/hover-card.js",
+      "require": "./dist/hover-card.cjs"
+    },
+    "./menubar": {
+      "types": "./dist/menubar.d.ts",
+      "import": "./dist/menubar.js",
+      "require": "./dist/menubar.cjs"
+    },
+    "./pagination": {
+      "types": "./dist/pagination.d.ts",
+      "import": "./dist/pagination.js",
+      "require": "./dist/pagination.cjs"
     },
     "./select": {
       "types": "./dist/select.d.ts",
