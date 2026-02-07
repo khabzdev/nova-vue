@@ -203,6 +203,12 @@
             </NuxtLink>
           </li>
           <li>
+            <NuxtLink to="/components/skeleton" class="nav-item">
+              <Icon name="hugeicons:loading-02" class="nav-item-icon" />
+              Skeleton
+            </NuxtLink>
+          </li>
+          <li>
             <NuxtLink to="/components/slider" class="nav-item">
               <Icon name="hugeicons:sliders-horizontal" class="nav-item-icon" />
               Slider

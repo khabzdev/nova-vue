@@ -52,6 +52,7 @@ export default defineConfig({
         select: resolve(__dirname, 'src/components/Select/index.ts'),
         separator: resolve(__dirname, 'src/components/Separator/index.ts'),
         sheet: resolve(__dirname, 'src/components/Sheet/index.ts'),
+        skeleton: resolve(__dirname, 'src/components/Skeleton/index.ts'),
         slider: resolve(__dirname, 'src/components/Slider/index.ts'),
         splitter: resolve(__dirname, 'src/components/Splitter/index.ts'),
         switch: resolve(__dirname, 'src/components/Switch/index.ts'),

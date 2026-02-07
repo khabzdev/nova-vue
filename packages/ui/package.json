@@ -152,6 +152,11 @@
       "import": "./dist/sheet.js",
       "require": "./dist/sheet.cjs"
     },
+    "./skeleton": {
+      "types": "./dist/skeleton.d.ts",
+      "import": "./dist/skeleton.js",
+      "require": "./dist/skeleton.cjs"
+    },
     "./toast": {
       "types": "./dist/toast.d.ts",
       "import": "./dist/toast.js",
