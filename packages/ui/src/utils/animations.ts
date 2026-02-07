@@ -46,3 +46,43 @@ export const buttonPressPreset = {
   whileTap: { scale: 0.98 },
   transition: { type: 'spring' as const, stiffness: 400, damping: 17 },
 }
+
+/**
+ * Slide from right animation for sheets/drawers.
+ */
+export const slideFromRightPreset = {
+  initial: { x: '100%' },
+  animate: { x: 0 },
+  exit: { x: '100%' },
+  transition: { type: 'spring' as const, stiffness: 400, damping: 40 },
+}
+
+/**
+ * Slide from left animation for sheets/drawers.
+ */
+export const slideFromLeftPreset = {
+  initial: { x: '-100%' },
+  animate: { x: 0 },
+  exit: { x: '-100%' },
+  transition: { type: 'spring' as const, stiffness: 400, damping: 40 },
+}
+
+/**
+ * Slide from top animation for sheets/drawers.
+ */
+export const slideFromTopPreset = {
+  initial: { y: '-100%' },
+  animate: { y: 0 },
+  exit: { y: '-100%' },
+  transition: { type: 'spring' as const, stiffness: 400, damping: 40 },
+}
+
+/**
+ * Slide from bottom animation for drawers.
+ */
+export const slideFromBottomPreset = {
+  initial: { y: '100%' },
+  animate: { y: 0 },
+  exit: { y: '100%' },
+  transition: { type: 'spring' as const, stiffness: 400, damping: 40 },
+}

@@ -101,6 +101,12 @@
             </NuxtLink>
           </li>
           <li>
+            <NuxtLink to="/components/drawer" class="nav-item">
+              <Icon name="hugeicons:arrow-up-down" class="nav-item-icon" />
+              Drawer
+            </NuxtLink>
+          </li>
+          <li>
             <NuxtLink to="/components/dropdown-menu" class="nav-item">
               <Icon name="hugeicons:arrow-down-01" class="nav-item-icon" />
               Dropdown Menu
@@ -188,6 +194,12 @@
             <NuxtLink to="/components/separator" class="nav-item">
               <Icon name="hugeicons:minus-sign" class="nav-item-icon" />
               Separator
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/components/sheet" class="nav-item">
+              <Icon name="hugeicons:sidebar-right" class="nav-item-icon" />
+              Sheet
             </NuxtLink>
           </li>
           <li>

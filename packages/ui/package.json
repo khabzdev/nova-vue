@@ -77,6 +77,11 @@
       "import": "./dist/dialog.js",
       "require": "./dist/dialog.cjs"
     },
+    "./drawer": {
+      "types": "./dist/drawer.d.ts",
+      "import": "./dist/drawer.js",
+      "require": "./dist/drawer.cjs"
+    },
     "./dropdown-menu": {
       "types": "./dist/dropdown-menu.d.ts",
       "import": "./dist/dropdown-menu.js",
@@ -141,6 +146,11 @@
       "types": "./dist/separator.d.ts",
       "import": "./dist/separator.js",
       "require": "./dist/separator.cjs"
+    },
+    "./sheet": {
+      "types": "./dist/sheet.d.ts",
+      "import": "./dist/sheet.js",
+      "require": "./dist/sheet.cjs"
     },
     "./toast": {
       "types": "./dist/toast.d.ts",
