@@ -47,6 +47,12 @@
             </NuxtLink>
           </li>
           <li>
+            <NuxtLink to="/components/autocomplete" class="nav-item">
+              <Icon name="hugeicons:search-list-01" class="nav-item-icon" />
+              Autocomplete
+            </NuxtLink>
+          </li>
+          <li>
             <NuxtLink to="/components/avatar" class="nav-item">
               <Icon name="hugeicons:user-circle" class="nav-item-icon" />
               Avatar
@@ -74,6 +80,12 @@
             <NuxtLink to="/components/checkbox" class="nav-item">
               <Icon name="hugeicons:tick-02" class="nav-item-icon" />
               Checkbox
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/components/command" class="nav-item">
+              <Icon name="hugeicons:command" class="nav-item-icon" />
+              Command
             </NuxtLink>
           </li>
           <li>
@@ -110,6 +122,12 @@
             <NuxtLink to="/components/input-group" class="nav-item">
               <Icon name="hugeicons:cursor-text" class="nav-item-icon" />
               Input Group
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/components/kbd" class="nav-item">
+              <Icon name="hugeicons:keyboard" class="nav-item-icon" />
+              Kbd
             </NuxtLink>
           </li>
           <li>

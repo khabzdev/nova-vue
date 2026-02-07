@@ -62,6 +62,11 @@
       "import": "./dist/checkbox.js",
       "require": "./dist/checkbox.cjs"
     },
+    "./command": {
+      "types": "./dist/command.d.ts",
+      "import": "./dist/command.js",
+      "require": "./dist/command.cjs"
+    },
     "./context-menu": {
       "types": "./dist/context-menu.d.ts",
       "import": "./dist/context-menu.js",
@@ -106,6 +111,11 @@
       "types": "./dist/input-group.d.ts",
       "import": "./dist/input-group.js",
       "require": "./dist/input-group.cjs"
+    },
+    "./kbd": {
+      "types": "./dist/kbd.d.ts",
+      "import": "./dist/kbd.js",
+      "require": "./dist/kbd.cjs"
     },
     "./label": {
       "types": "./dist/label.d.ts",
@@ -191,6 +201,11 @@
       "types": "./dist/alert.d.ts",
       "import": "./dist/alert.js",
       "require": "./dist/alert.cjs"
+    },
+    "./autocomplete": {
+      "types": "./dist/autocomplete.d.ts",
+      "import": "./dist/autocomplete.js",
+      "require": "./dist/autocomplete.cjs"
     },
     "./splitter": {
       "types": "./dist/splitter.d.ts",
