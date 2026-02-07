@@ -7,8 +7,10 @@
         <slot />
       </main>
     </div>
+    <Toaster />
   </div>
 </template>
 
 <script setup lang="ts">
+import { Toaster } from '@nova-vue/ui/toast'
 </script>

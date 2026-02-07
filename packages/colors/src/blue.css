@@ -5,7 +5,7 @@
  */
 
 /* Light Mode */
-:root {
+[data-theme="blue"] {
   --primary: var(--color-blue-600);
   --primary-foreground: var(--color-white);
   --ring: var(--color-blue-400);
@@ -21,7 +21,8 @@
 }
 
 /* Dark Mode */
-.dark {
+[data-theme="blue"].dark,
+.dark [data-theme="blue"] {
   --primary: var(--color-blue-500);
   --primary-foreground: var(--color-white);
   --ring: var(--color-blue-400);

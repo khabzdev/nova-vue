@@ -68,7 +68,7 @@ const handleClasses = computed(() =>
   <SplitterResizeHandlePrimitive
     v-bind="forwarded"
     :class="classes"
-    class="group/handle data-[orientation=horizontal]:w-px data-[orientation=horizontal]:after:-left-1 data-[orientation=horizontal]:after:-right-1 data-[orientation=vertical]:h-px data-[orientation=vertical]:after:-top-1 data-[orientation=vertical]:after:-bottom-1"
+    class="group/handle data-[orientation=horizontal]:w-px data-[orientation=horizontal]:after:-left-1 data-[orientation=horizontal]:after:-right-1 data-[orientation=vertical]:h-px data-[orientation=vertical]:w-full data-[orientation=vertical]:after:-top-1 data-[orientation=vertical]:after:-bottom-1"
   >
     <div v-if="withHandle" :class="handleClasses" />
   </SplitterResizeHandlePrimitive>

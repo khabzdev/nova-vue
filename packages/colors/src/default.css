@@ -5,14 +5,17 @@
  */
 
 /* Light Mode - Default uses neutral colors */
-:root {
+:root,
+[data-theme="default"] {
   --primary: var(--color-neutral-800);
   --primary-foreground: var(--color-neutral-50);
   --ring: var(--color-neutral-400);
 }
 
 /* Dark Mode */
-.dark {
+.dark,
+[data-theme="default"].dark,
+.dark [data-theme="default"] {
   --primary: var(--color-neutral-100);
   --primary-foreground: var(--color-neutral-800);
   --ring: var(--color-neutral-500);

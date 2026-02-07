@@ -21,7 +21,7 @@
 
       <div class="feature-card">
         <div class="feature-card-icon">
-          <Icon name="hugeicons:accessibility" class="w-5 h-5" />
+          <Icon name="hugeicons:wheelchair" class="w-5 h-5" />
         </div>
         <h3>Accessible</h3>
         <p>Built on Reka UI primitives with full WAI-ARIA compliance.</p>

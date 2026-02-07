@@ -9,22 +9,22 @@
 
     <ComponentPreview title="Default" :code="defaultCode">
       <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarImage src="https://pbs.twimg.com/profile_images/1908475222728011776/z_pvBR14_400x400.jpg" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
     </ComponentPreview>
 
     <ComponentPreview title="Sizes" :code="sizesCode">
       <Avatar size="sm">
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarImage src="https://pbs.twimg.com/profile_images/1908475222728011776/z_pvBR14_400x400.jpg" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
       <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarImage src="https://pbs.twimg.com/profile_images/1908475222728011776/z_pvBR14_400x400.jpg" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
       <Avatar size="lg">
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarImage src="https://pbs.twimg.com/profile_images/1908475222728011776/z_pvBR14_400x400.jpg" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
     </ComponentPreview>
@@ -105,7 +105,7 @@ definePageMeta({
 })
 
 const defaultCode = `<Avatar>
-  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+  <AvatarImage src="https://pbs.twimg.com/profile_images/1908475222728011776/z_pvBR14_400x400.jpg" alt="@shadcn" />
   <AvatarFallback>CN</AvatarFallback>
 </Avatar>`
 

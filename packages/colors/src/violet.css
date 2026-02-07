@@ -5,7 +5,7 @@
  */
 
 /* Light Mode */
-:root {
+[data-theme="violet"] {
   --primary: var(--color-violet-600);
   --primary-foreground: var(--color-white);
   --ring: var(--color-violet-400);
@@ -21,7 +21,8 @@
 }
 
 /* Dark Mode */
-.dark {
+[data-theme="violet"].dark,
+.dark [data-theme="violet"] {
   --primary: var(--color-violet-500);
   --primary-foreground: var(--color-white);
   --ring: var(--color-violet-400);

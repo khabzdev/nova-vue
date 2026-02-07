@@ -54,7 +54,7 @@
           </li>
           <li>
             <NuxtLink to="/components/button" class="nav-item">
-              <Icon name="hugeicons:cursor-click-01" class="nav-item-icon" />
+              <Icon name="hugeicons:mouse-left-click-01" class="nav-item-icon" />
               Button
             </NuxtLink>
           </li>
@@ -66,7 +66,7 @@
           </li>
           <li>
             <NuxtLink to="/components/checkbox" class="nav-item">
-              <Icon name="hugeicons:checkbox" class="nav-item-icon" />
+              <Icon name="hugeicons:tick-02" class="nav-item-icon" />
               Checkbox
             </NuxtLink>
           </li>
@@ -96,13 +96,13 @@
           </li>
           <li>
             <NuxtLink to="/components/input" class="nav-item">
-              <Icon name="hugeicons:text-field" class="nav-item-icon" />
+              <Icon name="hugeicons:cursor-text" class="nav-item-icon" />
               Input
             </NuxtLink>
           </li>
           <li>
             <NuxtLink to="/components/input-group" class="nav-item">
-              <Icon name="hugeicons:text-field" class="nav-item-icon" />
+              <Icon name="hugeicons:cursor-text" class="nav-item-icon" />
               Input Group
             </NuxtLink>
           </li>
@@ -168,7 +168,7 @@
           </li>
           <li>
             <NuxtLink to="/components/slider" class="nav-item">
-              <Icon name="hugeicons:slider-03" class="nav-item-icon" />
+              <Icon name="hugeicons:sliders-horizontal" class="nav-item-icon" />
               Slider
             </NuxtLink>
           </li>
@@ -186,7 +186,7 @@
           </li>
           <li>
             <NuxtLink to="/components/tabs" class="nav-item">
-              <Icon name="hugeicons:tabs" class="nav-item-icon" />
+              <Icon name="hugeicons:layers-01" class="nav-item-icon" />
               Tabs
             </NuxtLink>
           </li>
