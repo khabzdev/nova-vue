@@ -16,6 +16,12 @@
               Installation
             </NuxtLink>
           </li>
+          <li>
+            <NuxtLink to="/getting-started/customization" class="nav-item">
+              <Icon name="hugeicons:paint-brush-01" class="nav-item-icon" />
+              Customization
+            </NuxtLink>
+          </li>
         </ul>
       </div>
 
