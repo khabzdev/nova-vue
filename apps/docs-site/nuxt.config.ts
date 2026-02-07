@@ -8,6 +8,10 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode'
   ],
 
+  nitro: {
+    preset: 'vercel'
+  },
+
   colorMode: {
     classSuffix: '',
     preference: 'dark',
